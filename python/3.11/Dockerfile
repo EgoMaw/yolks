@@ -1,4 +1,4 @@
-FROM        --platform=$TARGETOS/$TARGETARCH python:3.11-slim
+FROM        --platform=$TARGETOS/$TARGETARCH python:3.11-rc-slim
 
 LABEL       author="EgoMaw" maintainer="egomaw@dedicatedmc.io"
 
