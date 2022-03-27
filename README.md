@@ -18,21 +18,15 @@ example of this would be something like Java or Python which are used for runnin
 All of these images are available for `linux/amd64` and `linux/arm64` versions, unless otherwise specified, to use
 these images on an arm system, no modification to them or the tag is needed, they should just work.
 
-## Contributing
-
-When adding a new version to an existing image, such as `java v42`, you'd add it within a child folder of `java`, so
-`java/42/Dockerfile` for example. Please also update the correct `.github/workflows` file to ensure that this new version
-is tagged correctly.
-
 ## Available Images
 
 ### [Oses](/oses)
 
-* [alpine](/oses/alpine)
+* [Alpine](/oses/alpine)
   * `ghcr.io/egomaw/yolks:alpine`
-* [debian](/oses/debian)
+* [Debian](/oses/debian)
   * `ghcr.io/egomaw/yolks:debian`
-* [ubuntu](/oses/ubuntu)
+* [Ubuntu](/oses/ubuntu)
   * `ghcr.io/egomaw/yolks:ubuntu`
 
 ### [Bot](/bot)
@@ -48,13 +42,13 @@ is tagged correctly.
 
 ### [dotNet](/dotnet)
 
-* [`dotnet2.1`](/dotnet/2.1)
+* [`DotNet 2.1`](/dotnet/2.1)
   * `ghcr.io/egomaw/yolks:dotnet_2.1`
-* [`dotnet3.1`](/dotnet/3.1)
+* [`DotNet 3.1`](/dotnet/3.1)
   * `ghcr.io/egomaw/yolks:dotnet_3.1`
-* [`dotnet5.0`](/dotnet/5)
+* [`DotNet 5.0`](/dotnet/5)
   * `ghcr.io/egomaw/yolks:dotnet_5`
-* [`dotnet6.0`](/dotnet/6)
+* [`DotNet 6.0`](/dotnet/6)
   * `ghcr.io/egomaw/yolks:dotnet_6`
 
 ### [Games](/games)
@@ -68,36 +62,36 @@ is tagged correctly.
 
 ### [Golang](/go)
 
-* [`go1.14`](/go/1.14)
+* [`Go 1.14`](/go/1.14)
   * `ghcr.io/egomaw/yolks:go_1.14`
-* [`go1.15`](/go/1.15)
+* [`Go 1.15`](/go/1.15)
   * `ghcr.io/egomaw/yolks:go_1.15`
-* [`go1.16`](/go/1.16)
+* [`Go 1.16`](/go/1.16)
   * `ghcr.io/egomaw/yolks:go_1.16`
 
 ### [Java](/java)
 
-* [`java7`](/java/7)
+* [`Java 7`](/java/7)
   * `ghcr.io/egomaw/yolks:java_7`
-* [`java8`](/java/8)
+* [`Java 8`](/java/8)
   * `ghcr.io/egomaw/yolks:java_8`
-* [`java8`](/java/8-forge)
+* [`Java 8 Forge`](/java/8-forge)
   * `ghcr.io/egomaw/yolks:java_8-forge`
-* [`java9`](/java/9)
+* [`Java 9`](/java/9)
   * `ghcr.io/egomaw/yolks:java_9`
-* [`java11`](/java/11)
+* [`Java 11`](/java/11)
   * `ghcr.io/egomaw/yolks:java_11`
-* [`java11`](/java/11-forge)
+* [`Java 11 Forge`](/java/11-forge)
   * `ghcr.io/egomaw/yolks:java_11-forge`
-* [`java14`](/java/14)
+* [`Java 14`](/java/14)
   * `ghcr.io/egomaw/yolks:java_14`
-* [`java16`](/java/16)
+* [`Java 16`](/java/16)
   * `ghcr.io/egomaw/yolks:java_16`
-* [`java17`](/java/17)
+* [`Java 17`](/java/17)
   * `ghcr.io/egomaw/yolks:java_17`
-* [`java17`](/java/18)
+* [`Java 18`](/java/18)
   * `ghcr.io/egomaw/yolks:java_18`
-* [`java17`](/java/19)
+* [`Java 19`](/java/19)
   * `ghcr.io/egomaw/yolks:java_19`
 
 ### [MariaDB](/mariadb)
@@ -120,16 +114,15 @@ is tagged correctly.
 * [`MongoDB 5`](/mongodb/5)
   * `ghcr.io/egomaw/yolks:mongodb_5`
 
-
 ### [Nodejs](/nodejs)
 
-* [`node12`](/nodejs/12)
+* [`Node 12`](/nodejs/12)
   * `ghcr.io/egomaw/yolks:nodejs_12`
-* [`node14`](/nodejs/14)
+* [`Node 14`](/nodejs/14)
   * `ghcr.io/egomaw/yolks:nodejs_14`
-* [`node16`](/nodejs/16)
+* [`Node 16`](/nodejs/16)
   * `ghcr.io/egomaw/yolks:nodejs_16`
-* [`node17`](/nodejs/17)
+* [`Node 17`](/nodejs/17)
   * `ghcr.io/egomaw/yolks:nodejs_17`
 
 ### [PostgreSQL](/postgres)
@@ -149,27 +142,27 @@ is tagged correctly.
 
 ### [Python](/python)
 
-* [`python3.7`](/python/3.7)
+* [`Python 3.7`](/python/3.7)
   * `ghcr.io/egomaw/yolks:python_3.7`
-* [`python3.8`](/python/3.8)
+* [`Python 3.8`](/python/3.8)
   * `ghcr.io/egomaw/yolks:python_3.8`
-* [`python3.9`](/python/3.9)
+* [`Python 3.9`](/python/3.9)
   * `ghcr.io/egomaw/yolks:python_3.9`
-* [`python3.10`](/python/3.10)
+* [`Python 3.10`](/python/3.10)
   * `ghcr.io/egomaw/yolks:python_3.10`
-* [`python3.11`](/python/3.11)
+* [`Python 3.11`](/python/3.11)
   * `ghcr.io/egomaw/yolks:python_3.11`
 
 ### [Wine](/wine)
 
-* [`Wine-stable`](/wine/stable)
+* [`Wine Stable`](/wine/stable)
   * `ghcr.io/egomaw/yolks:wine_stable`
-* [`Wine-staging`](/wine/staging)
+* [`Wine Staging`](/wine/staging)
   * `ghcr.io/egomaw/yolks:wine_staging`
 
 ### [Installation Images](/installers)
 
-* [`alpine-install`](/installers/alpine)
+* [`Alpine Installer`](/installers/alpine)
   * `ghcr.io/egomaw/installers:alpine`
-* [`debian-install`](/installers/debian)
+* [`Debian Installer`](/installers/debian)
   * `ghcr.io/egomaw/installers:debian`
