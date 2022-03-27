@@ -1,6 +1,6 @@
 FROM        python:3.8-slim
 
-LABEL       author="Michael Parker" maintainer="parker@pterodactyl.io"
+LABEL       author="EgoMaw" maintainer="egomaw@dedicatedmc.io"
 
 RUN         mkdir -p /usr/share/man/man1 \
             && apt update \

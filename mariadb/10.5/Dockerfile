@@ -3,7 +3,7 @@
 # -----------------------------------------------------
 FROM        --platform=$TARGETOS/$TARGETARCH mariadb:10.5
 
-LABEL       author="Michael Parker" maintainer="parker@pterodactyl.io"
+LABEL       author="EgoMaw" maintainer="egomaw@dedicatedmc.io"
 
 ENV         DEBIAN_FRONTEND noninteractive
 

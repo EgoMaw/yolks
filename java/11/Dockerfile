@@ -1,6 +1,6 @@
 FROM        --platform=$TARGETOS/$TARGETARCH openjdk:11-slim-bullseye
 
-LABEL       author="Michael Parker" maintainer="parker@pterodactyl.io"
+LABEL       author="EgoMaw" maintainer="egomaw@dedicatedmc.io"
 
 LABEL       org.opencontainers.image.source="https://github.com/pterodactyl/yolks"
 LABEL       org.opencontainers.image.licenses=MIT

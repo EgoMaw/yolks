@@ -1,6 +1,6 @@
 FROM        node:14-buster
 
-LABEL       author="Michael Parker" maintainer="parker@pterodactyl.io"
+LABEL       author="EgoMaw" maintainer="egomaw@dedicatedmc.io"
     ## install mongo
 RUN wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc | apt-key add - \
  && echo "deb http://repo.mongodb.org/apt/debian buster/mongodb-org/4.2 main" | tee /etc/apt/sources.list.d/mongodb-org-4.2.list \

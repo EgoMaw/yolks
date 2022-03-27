@@ -1,6 +1,6 @@
 FROM  --platform=$TARGETOS/$TARGETARCH ubuntu:18.04
 
-LABEL author="Michael Parker" maintainer="parker@pterodactyl.io"
+LABEL author="EgoMaw" maintainer="egomaw@dedicatedmc.io"
 
 ENV   DEBIAN_FRONTEND noninteractive
 

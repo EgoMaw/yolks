@@ -1,6 +1,6 @@
 FROM        --platform=$TARGETOS/$TARGETARCH adoptopenjdk/openjdk16-openj9:debianslim
 
-LABEL       author="Michael Parker" maintainer="parker@pterodactyl.io"
+LABEL       author="EgoMaw" maintainer="egomaw@dedicatedmc.io"
 
 RUN         apt update -y \
 						&& apt install -y curl ca-certificates openssl git tar sqlite3 fontconfig tzdata iproute2 libfreetype6 \

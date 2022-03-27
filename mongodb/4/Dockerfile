@@ -3,7 +3,7 @@
 # ----------------------------------
 FROM        --platform=$TARGETOS/$TARGETARCH mongo:4-focal
 
-LABEL       author="Michael Parker" maintainer="parker@pterodactyl.io"
+LABEL       author="EgoMaw" maintainer="egomaw@dedicatedmc.io"
 
 ENV         DEBIAN_FRONTEND noninteractive
 
