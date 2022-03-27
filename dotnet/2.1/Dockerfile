@@ -1,4 +1,4 @@
-FROM        --platform=$BUILDPLATFORM ghcr.io/parkervcp/yolks:debian
+FROM        --platform=$BUILDPLATFORM ghcr.io/egomaw/yolks:debian
 
 LABEL       author="Torsten Widmann" maintainer="info@goover.de"
 

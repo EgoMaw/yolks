@@ -1,7 +1,7 @@
 # ----------------------------------
 # Generic Wine 6 image
 # ----------------------------------
-FROM    ghcr.io/parkervcp/yolks:debian
+FROM    ghcr.io/egomaw/yolks:debian
 
 LABEL   author="Michael Parker" maintainer="parker@pterodactyl.io"
 
