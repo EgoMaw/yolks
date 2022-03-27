@@ -16,7 +16,10 @@ jobs:
       fail-fast: false
       matrix:
         tag:
-          - latest
+          - stable
+          - staging
+          - 4
+          - 5
     steps:
       - uses: actions/checkout@v2
       - uses: docker/setup-buildx-action@v1
