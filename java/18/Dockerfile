@@ -1,4 +1,4 @@
-FROM        --platform=$TARGETOS/$TARGETARCH openjdk:8-slim-bullseye
+FROM        --platform=$TARGETOS/$TARGETARCH openjdk:18-slim-bullseye
 
 LABEL       author="Michael Parker" maintainer="parker@pterodactyl.io"
 
