@@ -46,13 +46,6 @@ is tagged correctly.
 * [`sinusbot`](/bot/sinusbot)
   * `ghcr.io/egomaw/yolks:bot_sinusbot`
 
-### [Cassandra](/cassandra)
-
-* [`cassandra_java8_python27`](/cassandra/cassandra_java8_python2)
-  * `ghcr.io/egomaw/yolks:cassandra_java11_python2`
-* [`cassandra_java11_python3`](/cassandra/cassandra_java11_python3)
-  * `ghcr.io/egomaw/yolks:cassandra_java11_python3`
-
 ### [dotNet](/dotnet)
 
 * [`dotnet2.1`](/dotnet/2.1)
@@ -63,15 +56,6 @@ is tagged correctly.
   * `ghcr.io/egomaw/yolks:dotnet_5`
 * [`dotnet6.0`](/dotnet/6)
   * `ghcr.io/egomaw/yolks:dotnet_6`
-
-### [Erlang](/erlang)
-
-* [`erlang22`](/erlang/22)
-  * `ghcr.io/egomaw/yolks:erlang_22`
-* [`erlang23`](/erlang/23)
-  * `ghcr.io/egomaw/yolks:erlang_23`
-* [`erlang24`](/erlang/24)
-  * `ghcr.io/egomaw/yolks:erlang_24`
 
 ### [Games](/games)
 
@@ -97,38 +81,45 @@ is tagged correctly.
   * `ghcr.io/egomaw/yolks:java_7`
 * [`java8`](/java/8)
   * `ghcr.io/egomaw/yolks:java_8`
+* [`java8`](/java/8-forge)
+  * `ghcr.io/egomaw/yolks:java_8-forge`
 * [`java9`](/java/9)
   * `ghcr.io/egomaw/yolks:java_9`
 * [`java11`](/java/11)
   * `ghcr.io/egomaw/yolks:java_11`
+* [`java11`](/java/11-forge)
+  * `ghcr.io/egomaw/yolks:java_11-forge`
 * [`java14`](/java/14)
   * `ghcr.io/egomaw/yolks:java_14`
 * [`java16`](/java/16)
   * `ghcr.io/egomaw/yolks:java_16`
 * [`java17`](/java/17)
   * `ghcr.io/egomaw/yolks:java_17`
+* [`java17`](/java/18)
+  * `ghcr.io/egomaw/yolks:java_18`
+* [`java17`](/java/19)
+  * `ghcr.io/egomaw/yolks:java_19`
 
 ### [MariaDB](/mariadb)
-  * [`MariaDB 10.3`](/mariadb/10.3)
-    * `ghcr.io/egomaw/yolks:mariadb_10.3`
-  * [`MariaDB 10.4`](/mariadb/10.4)
-    * `ghcr.io/egomaw/yolks:mariadb_10.4`
-  * [`MariaDB 10.5`](/mariadb/10.5)
-    * `ghcr.io/egomaw/yolks:mariadb_10.5`
-  * [`MariaDB 10.6`](/mariadb/10.6)
-    * `ghcr.io/egomaw/yolks:mariadb_10.6`
-  * [`MariaDB 10.7`](/mariadb/10.7)
-    * `ghcr.io/egomaw/yolks:mariadb_10.7`
+
+* [`MariaDB 10.3`](/mariadb/10.3)
+  * `ghcr.io/egomaw/yolks:mariadb_10.3`
+* [`MariaDB 10.4`](/mariadb/10.4)
+  * `ghcr.io/egomaw/yolks:mariadb_10.4`
+* [`MariaDB 10.5`](/mariadb/10.5)
+  * `ghcr.io/egomaw/yolks:mariadb_10.5`
+* [`MariaDB 10.6`](/mariadb/10.6)
+  * `ghcr.io/egomaw/yolks:mariadb_10.6`
+* [`MariaDB 10.7`](/mariadb/10.7)
+  * `ghcr.io/egomaw/yolks:mariadb_10.7`
 
 ### [MongoDB](/mongodb)
-  * [`MongoDB 4`](/mongodb/4)
-    * `ghcr.io/egomaw/yolks:mongodb_4`
-  * [`MongoDB 5`](/mongodb/5)
-    * `ghcr.io/egomaw/yolks:mongodb_5`
 
-### [Mono](/mono)
-* [`mono_latest`](/mono/latest)
-  * `ghcr.io/egomaw/yolks:mono_latest`
+* [`MongoDB 4`](/mongodb/4)
+  * `ghcr.io/egomaw/yolks:mongodb_4`
+* [`MongoDB 5`](/mongodb/5)
+  * `ghcr.io/egomaw/yolks:mongodb_5`
+
 
 ### [Nodejs](/nodejs)
 
@@ -142,18 +133,19 @@ is tagged correctly.
   * `ghcr.io/egomaw/yolks:nodejs_17`
 
 ### [PostgreSQL](/postgres)
-  * [`Postgres 9`](/postgres/9)
-    * `ghcr.io/egomaw/yolks:postgres_9`
-  * [`Postgres 10`](/postgres/10)
-    * `ghcr.io/egomaw/yolks:postgres_10`
-  * [`Postgres 11`](/postgres/11)
-    * `ghcr.io/egomaw/yolks:postgres_11`
-  * [`Postgres 12`](/postgres/12)
-    * `ghcr.io/egomaw/yolks:postgres_12`
-  * [`Postgres 13`](/postgres/13)
-    * `ghcr.io/egomaw/yolks:postgres_13`
-  * [`Postgres 14`](/postgres/14)
-    * `ghcr.io/egomaw/yolks:postgres_14`  
+
+* [`Postgres 9`](/postgres/9)
+  * `ghcr.io/egomaw/yolks:postgres_9`
+* [`Postgres 10`](/postgres/10)
+  * `ghcr.io/egomaw/yolks:postgres_10`
+* [`Postgres 11`](/postgres/11)
+  * `ghcr.io/egomaw/yolks:postgres_11`
+* [`Postgres 12`](/postgres/12)
+  * `ghcr.io/egomaw/yolks:postgres_12`
+* [`Postgres 13`](/postgres/13)
+  * `ghcr.io/egomaw/yolks:postgres_13`
+* [`Postgres 14`](/postgres/14)
+  * `ghcr.io/egomaw/yolks:postgres_14`
 
 ### [Python](/python)
 
@@ -165,22 +157,15 @@ is tagged correctly.
   * `ghcr.io/egomaw/yolks:python_3.9`
 * [`python3.10`](/python/3.10)
   * `ghcr.io/egomaw/yolks:python_3.10`
-
-### [Redis](/redis)
-  * [`Redis 5`](/redis/5)
-    * `ghcr.io/egomaw/yolks:redis_5`
-  * [`Redis 6`](/redis/6)
-    * `ghcr.io/egomaw/yolks:redis_6`
-
-### [Voice](/voice)
-
-* [`TeaSpeak`](/teaspeak)
-  * `ghcr.io/egomaw/yolks:voice_teaspeak`
+* [`python3.11`](/python/3.11)
+  * `ghcr.io/egomaw/yolks:python_3.11`
 
 ### [Wine](/wine)
 
-* [`Wine`](/wine)
-  * `ghcr.io/egomaw/yolks:wine_latest`
+* [`Wine-stable`](/wine/stable)
+  * `ghcr.io/egomaw/yolks:wine_stable`
+* [`Wine-staging`](/wine/staging)
+  * `ghcr.io/egomaw/yolks:wine_staging`
 
 ### [Installation Images](/installers)
 
