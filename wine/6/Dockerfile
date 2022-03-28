@@ -17,7 +17,7 @@ RUN     wget -nc https://dl.winehq.org/wine-builds/winehq.key \
         && wget -O- -q download.opensuse.org/repositories/Emulators:/Wine:/Debian/Debian_11/Release.key | apt-key add - \
         && echo "deb http://download.opensuse.org/repositories/Emulators:/Wine:/Debian/Debian_11 ./" | tee /etc/apt/sources.list.d/wine-obs.list \
         && apt update \
-        && apt install -y --install-recommends winehq-stable=5.0.4~bullseye-1 wine-stable=5.0.4~bullseye-1 wine-stable-amd64=5.0.4~bullseye-1 wine-stable-i386=5.0.4~bullseye-1 cabextract xvfb
+        && apt install -y --install-recommends winehq-stable=6.0.3~bullseye-1 wine-stable=6.0.3~bullseye-1 wine-stable-amd64=6.0.3~bullseye-1 wine-stable-i386=6.0.3~bullseye-1 cabextract xvfb
 
 # Set up Winetricks
 RUN	wget -q -O /usr/sbin/winetricks https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks \

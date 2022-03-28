@@ -22,11 +22,11 @@ these images on an arm system, no modification to them or the tag is needed, the
 
 ### [Oses](/oses)
 
-* [Alpine](/oses/alpine)
+* [`Alpine`](/oses/alpine)
   * `ghcr.io/egomaw/yolks:alpine`
-* [Debian](/oses/debian)
+* [`Debian`](/oses/debian)
   * `ghcr.io/egomaw/yolks:debian`
-* [Ubuntu](/oses/ubuntu)
+* [`Ubuntu`](/oses/ubuntu)
   * `ghcr.io/egomaw/yolks:ubuntu`
 
 ### [Bot](/bot)
