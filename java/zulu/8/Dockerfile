@@ -1,4 +1,4 @@
-FROM        --platform=$TARGETOS/$TARGETARCH openjdk:19-slim-bullseye
+FROM        --platform=$TARGETOS/$TARGETARCH zulu-openjdk-debian:8
 
 LABEL       author="EgoMaw" maintainer="egomaw@dedicatedmc.io"
 
@@ -13,5 +13,5 @@ USER        container
 ENV         USER=container HOME=/home/container
 WORKDIR     /home/container
 
-COPY        ./../entrypoint.sh /entrypoint.sh
+COPY       ./../../entrypoint.sh /entrypoint.sh
 CMD         [ "/bin/bash", "/entrypoint.sh" ]
