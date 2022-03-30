@@ -1,4 +1,4 @@
-FROM        --platform=$TARGETOS/$TARGETARCH zulu-openjdk-debian:16-jre
+FROM        --platform=$TARGETOS/$TARGETARCH azul/zulu-openjdk-debian:16-jre
 
 LABEL       author="EgoMaw" maintainer="egomaw@dedicatedmc.io"
 

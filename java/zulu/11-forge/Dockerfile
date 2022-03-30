@@ -6,7 +6,7 @@
 #
 # @see https://github.com/McModLauncher/modlauncher/issues/91
 
-FROM        --platform=$TARGETOS/$TARGETARCH zulu-openjdk-debian:11.0.13
+FROM        --platform=$TARGETOS/$TARGETARCH azul/zulu-openjdk-debian:11.0.13
 
 LABEL       author="EgoMaw" maintainer="egomaw@dedicatedmc.io"
 
