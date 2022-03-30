@@ -1,5 +1,5 @@
 #
-# Copyright (c) 2021 Matthew Penner
+# Copyright (c) 2022 EgoMaw
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -20,19 +20,16 @@
 # SOFTWARE.
 #
 
-FROM        --platform=$BUILDPLATFORM golang:1.17-alpine
+FROM        --platform=$BUILDPLATFORM debian:stable-slim
 
-LABEL       author="Matthew Penner" maintainer="matthew@pterodactyl.io"
+LABEL       author="EgoMaw" maintainer="egomaw@dedicatedmc.io"
 
-LABEL       org.opencontainers.image.source="https://github.com/pterodactyl/yolks"
+LABEL       org.opencontainers.image.source="https://github.com/egomaw/yolks"
 LABEL       org.opencontainers.image.licenses=MIT
 
-RUN         apk add --update --no-cache ca-certificates tzdata \
-				&& adduser -D -h /home/container container
+ENV         DEBIAN_FRONTEND=noninteractive
 
-USER        container
-ENV         USER=container HOME=/home/container
-WORKDIR     /home/container
+RUN         dpkg --add-architecture i386 && apt update && apt upgrade -y \
+	&& apt -y --no-install-recommends install ca-certificates curl lib32gcc-s1 libsdl2-2.0-0:i386 git unzip zip tar jq dos2unix python3 default-jdk
 
-COPY        ./../entrypoint.sh /entrypoint.sh
-CMD         [ "/bin/ash", "/entrypoint.sh" ]
+RUN			curl -sS https://webinstall.dev/yq | bash && export PATH="$HOME/.local/bin:$PATH"

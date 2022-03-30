@@ -29,17 +29,6 @@ these images on an arm system, no modification to them or the tag is needed, the
 * [`Ubuntu`](/oses/ubuntu)
   * `ghcr.io/egomaw/yolks:ubuntu`
 
-### [Bot](/bot)
-
-* [`bastion`](/bot/bastion)
-  * `ghcr.io/egomaw/yolks:bot_bastion`
-* [`parkertron`](/bot/parkertron)
-  * `ghcr.io/egomaw/yolks:bot_parkertron`
-* [`redbot`](/bot/red)
-  * `ghcr.io/egomaw/yolks:bot_red`
-* [`sinusbot`](/bot/sinusbot)
-  * `ghcr.io/egomaw/yolks:bot_sinusbot`
-
 ### [dotNet](/dotnet)
 
 * [`DotNet 2.1`](/dotnet/2.1)
@@ -71,28 +60,32 @@ these images on an arm system, no modification to them or the tag is needed, the
 
 ### [Java](/java)
 
+There are 3 different Java distributions used,`temurin`, `zulu` and `openjdk`.  
+Replace {{distribution}} with the one you want from above.  
+**Be Wary though** Not all distributions support all versions, check the folders inside the java folder to be sure.
+
 * [`Java 7`](/java/7)
-  * `ghcr.io/egomaw/yolks:java_7`
+  * `ghcr.io/egomaw/yolks:java_{{distribution}}_7`
 * [`Java 8`](/java/8)
-  * `ghcr.io/egomaw/yolks:java_8`
+  * `ghcr.io/egomaw/yolks:_{{distribution}}_8`
 * [`Java 8 Forge`](/java/8-forge)
-  * `ghcr.io/egomaw/yolks:java_8-forge`
+  * `ghcr.io/egomaw/yolks:_{{distribution}}_8-forge`
 * [`Java 9`](/java/9)
-  * `ghcr.io/egomaw/yolks:java_9`
+  * `ghcr.io/egomaw/yolks:_{{distribution}}_9`
 * [`Java 11`](/java/11)
-  * `ghcr.io/egomaw/yolks:java_11`
+  * `ghcr.io/egomaw/yolks:_{{distribution}}_11`
 * [`Java 11 Forge`](/java/11-forge)
-  * `ghcr.io/egomaw/yolks:java_11-forge`
+  * `ghcr.io/egomaw/yolks:_{{distribution}}_11-forge`
 * [`Java 14`](/java/14)
-  * `ghcr.io/egomaw/yolks:java_14`
+  * `ghcr.io/egomaw/yolks:_{{distribution}}_14`
 * [`Java 16`](/java/16)
-  * `ghcr.io/egomaw/yolks:java_16`
+  * `ghcr.io/egomaw/yolks:_{{distribution}}_16`
 * [`Java 17`](/java/17)
-  * `ghcr.io/egomaw/yolks:java_17`
+  * `ghcr.io/egomaw/yolks:_{{distribution}}_17`
 * [`Java 18`](/java/18)
-  * `ghcr.io/egomaw/yolks:java_18`
+  * `ghcr.io/egomaw/yolks:_{{distribution}}_18`
 * [`Java 19`](/java/19)
-  * `ghcr.io/egomaw/yolks:java_19`
+  * `ghcr.io/egomaw/yolks:_{{distribution}}_19`
 
 ### [MariaDB](/mariadb)
 
@@ -159,6 +152,12 @@ these images on an arm system, no modification to them or the tag is needed, the
   * `ghcr.io/egomaw/yolks:wine_stable`
 * [`Wine Staging`](/wine/staging)
   * `ghcr.io/egomaw/yolks:wine_staging`
+* [`Wine 6`](/wine/6)
+  * `ghcr.io/egomaw/yolks:wine_6`
+* [`Wine 5`](/wine/5)
+  * `ghcr.io/egomaw/yolks:wine_5`
+* [`Wine 4`](/wine/4)
+  * `ghcr.io/egomaw/yolks:wine_4`
 
 ### [Installation Images](/installers)
 
