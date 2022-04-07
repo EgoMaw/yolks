@@ -20,7 +20,7 @@
 # SOFTWARE.
 #
 
-FROM        --platform=$BUILDPLATFORM debian:stable-slim
+FROM        --platform=$BUILDPLATFORM openjdk:11-jre-bullseye
 
 LABEL       author="EgoMaw" maintainer="egomaw@dedicatedmc.io"
 
@@ -28,10 +28,9 @@ LABEL       org.opencontainers.image.source="https://github.com/egomaw/yolks"
 LABEL       org.opencontainers.image.licenses=MIT
 
 ENV         DEBIAN_FRONTEND=noninteractive
+ENV         PATH="/root/.local/bin:${PATH}"
 
 RUN        apt update && apt upgrade -y \
-		&& apt -y --no-install-recommends install ca-certificates curl git unzip zip tar jq dos2unix python3 default-jdk
+		&& apt -y --no-install-recommends install ca-certificates curl git unzip zip tar jq dos2unix python3
 
 RUN			curl -sS https://webinstall.dev/yq | bash
-
-RUN			export PATH="/root/.local/bin:$PATH"
