@@ -29,7 +29,9 @@ LABEL       org.opencontainers.image.licenses=MIT
 
 ENV         DEBIAN_FRONTEND=noninteractive
 
-RUN         dpkg --add-architecture i386 && apt update && apt upgrade -y \
-	&& apt -y --no-install-recommends install ca-certificates curl lib32gcc-s1 libsdl2-2.0-0:i386 git unzip zip tar jq dos2unix python3 default-jdk
+RUN        apt update && apt upgrade -y \
+		&& apt -y --no-install-recommends install ca-certificates curl git unzip zip tar jq dos2unix python3 default-jdk
 
-RUN			curl -sS https://webinstall.dev/yq | bash && export PATH="$HOME/.local/bin:$PATH"
+RUN			curl -sS https://webinstall.dev/yq | bash
+
+RUN			export PATH="/root/.local/bin:$PATH"

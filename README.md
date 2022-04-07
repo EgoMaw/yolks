@@ -165,3 +165,5 @@ Replace {{distribution}} with the one you want from above.
   * `ghcr.io/egomaw/installers:alpine`
 * [`Debian Installer`](/installers/debian)
   * `ghcr.io/egomaw/installers:debian`
+* [`Debian w Java Installer`](/installers/debian-curse)
+  * `ghcr.io/egomaw/installers:debian-curse`
