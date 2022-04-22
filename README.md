@@ -67,25 +67,25 @@ Replace {{distribution}} with the one you want from above.
 * [`Java 7`](/java/7)
   * `ghcr.io/egomaw/yolks:java_{{distribution}}_7`
 * [`Java 8`](/java/8)
-  * `ghcr.io/egomaw/yolks:_{{distribution}}_8`
+  * `ghcr.io/egomaw/yolks:java_{{distribution}}_8`
 * [`Java 8 Forge`](/java/8-forge)
-  * `ghcr.io/egomaw/yolks:_{{distribution}}_8-forge`
+  * `ghcr.io/egomaw/yolks:java_{{distribution}}_8-forge`
 * [`Java 9`](/java/9)
-  * `ghcr.io/egomaw/yolks:_{{distribution}}_9`
+  * `ghcr.io/egomaw/yolks:java_{{distribution}}_9`
 * [`Java 11`](/java/11)
-  * `ghcr.io/egomaw/yolks:_{{distribution}}_11`
+  * `ghcr.io/egomaw/yolks:java_{{distribution}}_11`
 * [`Java 11 Forge`](/java/11-forge)
-  * `ghcr.io/egomaw/yolks:_{{distribution}}_11-forge`
+  * `ghcr.io/egomaw/yolks:java_{{distribution}}_11-forge`
 * [`Java 14`](/java/14)
-  * `ghcr.io/egomaw/yolks:_{{distribution}}_14`
+  * `ghcr.io/egomaw/yolks:java_{{distribution}}_14`
 * [`Java 16`](/java/16)
-  * `ghcr.io/egomaw/yolks:_{{distribution}}_16`
+  * `ghcr.io/egomaw/yolks:java_{{distribution}}_16`
 * [`Java 17`](/java/17)
-  * `ghcr.io/egomaw/yolks:_{{distribution}}_17`
+  * `ghcr.io/egomaw/yolks:java_{{distribution}}_17`
 * [`Java 18`](/java/18)
-  * `ghcr.io/egomaw/yolks:_{{distribution}}_18`
+  * `ghcr.io/egomaw/yolks:java_{{distribution}}_18`
 * [`Java 19`](/java/19)
-  * `ghcr.io/egomaw/yolks:_{{distribution}}_19`
+  * `ghcr.io/egomaw/yolks:java_{{distribution}}_19`
 
 ### [MariaDB](/mariadb)
 
@@ -117,6 +117,8 @@ Replace {{distribution}} with the one you want from above.
   * `ghcr.io/egomaw/yolks:nodejs_16`
 * [`Node 17`](/nodejs/17)
   * `ghcr.io/egomaw/yolks:nodejs_17`
+* [`Node 18`](/nodejs/18)
+  * `ghcr.io/egomaw/yolks:nodejs_18`
 
 ### [PostgreSQL](/postgres)
 
@@ -165,5 +167,5 @@ Replace {{distribution}} with the one you want from above.
   * `ghcr.io/egomaw/installers:alpine`
 * [`Debian Installer`](/installers/debian)
   * `ghcr.io/egomaw/installers:debian`
-* [`Debian w Java Installer`](/installers/debian-curse)
-  * `ghcr.io/egomaw/installers:debian-curse`
+* [`Debian w Java Installer`](/installers/debian-java)
+  * `ghcr.io/egomaw/installers:debian-java`

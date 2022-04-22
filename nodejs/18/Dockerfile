@@ -1,5 +1,4 @@
-FROM        --platform=$TARGETOS/$TARGETARCH node:12-slim
-
+FROM        --platform=$TARGETOS/$TARGETARCH node:18-slim
 LABEL       author="EgoMaw" maintainer="egomaw@dedicatedmc.io"
 
 RUN         apt update \

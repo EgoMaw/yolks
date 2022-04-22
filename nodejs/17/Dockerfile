@@ -1,4 +1,4 @@
-FROM        --platform=$TARGETOS/$TARGETARCH node:17-bullseye-slim
+FROM        --platform=$TARGETOS/$TARGETARCH node:17-slim
 
 LABEL       author="EgoMaw" maintainer="egomaw@dedicatedmc.io"
 

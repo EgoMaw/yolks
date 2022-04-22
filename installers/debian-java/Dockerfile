@@ -30,7 +30,8 @@ LABEL       org.opencontainers.image.licenses=MIT
 ENV         DEBIAN_FRONTEND=noninteractive
 ENV         PATH="/root/.local/bin:${PATH}"
 
-RUN        apt update && apt upgrade -y \
-		&& apt -y --no-install-recommends install ca-certificates curl git unzip zip tar jq dos2unix python3
+RUN        && apt update \
+				&& apt upgrade -y \
+				&& apt -y --no-install-recommends install ca-certificates curl git unzip zip tar jq python3 dos2unix
 
 RUN			curl -sS https://webinstall.dev/yq | bash

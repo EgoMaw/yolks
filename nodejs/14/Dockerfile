@@ -1,5 +1,4 @@
-FROM        --platform=$TARGETOS/$TARGETARCH node:14-bullseye-slim
-
+FROM        --platform=$TARGETOS/$TARGETARCH node:14-slim
 LABEL       author="EgoMaw" maintainer="egomaw@dedicatedmc.io"
 
 RUN         apt update \
