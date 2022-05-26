@@ -33,4 +33,6 @@ ENV         PATH="/root/.local/bin:${PATH}"
 RUN        apt update && apt upgrade -y \
         && apt -y --no-install-recommends install ca-certificates curl git unzip zip tar jq python3 dos2unix
 
-RUN			curl -sS https://webinstall.dev/yq | bash
+RUN	   version=$(curl -s https://api.github.com/repos/mikefarah/yq/releases/latest | jq -r '.name') \
+        && curl "https://github.com/mikefarah/yq/releases/download/${version}/yq_linux_amd64" -sSLo /usr/bin/yq \
+        && chmod +x /usr/bin/yq
