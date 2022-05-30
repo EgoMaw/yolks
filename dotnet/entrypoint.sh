@@ -1,12 +1,26 @@
 #!/bin/bash
-cd /home/container
+# Default the TZ environment variable to UTC.
+TZ=${TZ:-UTC}
+export TZ
 
-# Make internal Docker IP address available to processes.
-INTERNAL_IP=$(ip route get 1 | awk '{print $(NF-2);exit}')
+# Set environment variable that holds the Internal Docker IP
+INTERNAL_IP=$(ip route get 1 | awk '{print $NF;exit}')
+export INTERNAL_IP
 
-# Replace Startup Variables
-MODIFIED_STARTUP=$(echo -e ${STARTUP} | sed -e 's/{{/${/g' -e 's/}}/}/g')
-echo -e ":/home/container$ ${MODIFIED_STARTUP}"
+# Switch to the container's working directory
+cd /home/container || exit 1
 
-# Run the Server
-eval ${MODIFIED_STARTUP}
+# Print Java version
+printf "\033[1m\033[33mcontainer@pterodactyl~ \033[0mdotnet --version\n"
+dotnet --version
+
+# Convert all of the "{{VARIABLE}}" parts of the command into the expected shell
+# variable format of "${VARIABLE}" before evaluating the string and automatically
+# replacing the values.
+PARSED=$(echo "${STARTUP}" | sed -e 's/{{/${/g' -e 's/}}/}/g' | eval echo "$(cat -)")
+
+# Display the command we're running in the output, and then execute it with the env
+# from the container itself.
+printf "\033[1m\033[33mcontainer@pterodactyl~ \033[0m%s\n" "$PARSED"
+# shellcheck disable=SC2086
+eval ${PARSED}
