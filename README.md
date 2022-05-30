@@ -39,6 +39,8 @@ these images on an arm system, no modification to them or the tag is needed, the
   * `ghcr.io/egomaw/yolks:dotnet_5`
 * [`DotNet 6.0`](/dotnet/6)
   * `ghcr.io/egomaw/yolks:dotnet_6`
+* [`DotNet 7.0`](/dotnet/7)
+  * `ghcr.io/egomaw/yolks:dotnet_7`
 
 ### [Games](/games)
 
