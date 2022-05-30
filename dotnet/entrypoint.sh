@@ -11,8 +11,8 @@ export INTERNAL_IP
 cd /home/container || exit 1
 
 # Print Java version
-printf "\033[1m\033[33mcontainer@pterodactyl~ \033[0mdotnet --version\n"
-dotnet --version
+printf "\033[1m\033[33mcontainer@pterodactyl~ \033[0mdotnet --info\n"
+dotnet --info
 
 # Convert all of the "{{VARIABLE}}" parts of the command into the expected shell
 # variable format of "${VARIABLE}" before evaluating the string and automatically
