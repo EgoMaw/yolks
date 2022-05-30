@@ -7,7 +7,7 @@ ENV         DEBIAN_FRONTEND noninteractive
 RUN        apt update -y \
             && apt upgrade -y \
             && apt install -y libgdiplus \
-            && curl -sSL https://dot.net/v1/dotnet-install.sh | bash -s -- -c 6.0 --runtime aspnetcore
+            && curl -sSL https://dot.net/v1/dotnet-install.sh | bash -s -- -c 6.0 --runtime aspnetcore --install-dir /usr/bin/
 
 USER        container
 ENV         USER=container HOME=/home/container
