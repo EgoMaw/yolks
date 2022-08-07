@@ -7,8 +7,8 @@ export TZ
 INTERNAL_IP=$(ip route get 1 | awk '{print $NF;exit}')
 export INTERNAL_IP
 
-# Switch to the container's working directory
-cd /home/container || exit 1
+# Make internal Docker IP address available to processes.
+export INTERNAL_IP=`ip route get 1 | awk '{print $NF;exit}'`
 
 # Print Java version
 printf "\033[1m\033[33mcontainer@pterodactyl~ \033[0mdotnet --list-runtimes\n"

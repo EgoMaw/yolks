@@ -1,7 +1,7 @@
 # ----------------------------------
 # Environment: debian
 # ----------------------------------
-FROM    node:16-bullseye
+FROM    --platform=$TARGETOS/$TARGETARCH node:16-bullseye
 
 LABEL   author="goover" maintainer="info@goover.de"
 
@@ -19,7 +19,7 @@ RUN     wget https://packages.microsoft.com/config/debian/11/packages-microsoft-
         && dpkg -i packages-microsoft-prod.deb \
         && apt update -y \
         && apt install -y dotnet-sdk-5.0 dotnet-sdk-6.0 libgdiplus
-		  
+
 RUN     update-locale lang=en_US.UTF-8 \
         && dpkg-reconfigure --frontend noninteractive locales
 
