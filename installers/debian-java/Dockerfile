@@ -20,7 +20,7 @@
 # SOFTWARE.
 #
 
-FROM        --platform=$BUILDPLATFORM openjdk:11-jre-bullseye
+FROM        --platform=$TARGETOS/$TARGETARCH openjdk:11-jre-bullseye
 
 LABEL       author="EgoMaw" maintainer="egomaw@dedicatedmc.io"
 

@@ -1,4 +1,4 @@
-FROM        --platform=$BUILDPLATFORM ghcr.io/egomaw/yolks:debian
+FROM        --platform=$TARGETOS/$TARGETARCH ghcr.io/egomaw/yolks:debian
 
 LABEL       author="EgoMaw" maintainer="egomaw@dedicatedmc.io"
 
