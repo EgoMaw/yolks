@@ -45,17 +45,11 @@ java -version
 # Convert all of the "{{VARIABLE}}" parts of the command into the expected shell
 # variable format of "${VARIABLE}" before evaluating the string and automatically
 # replacing the values.
-MODIFIED_STARTUP=$(echo "${STARTUP}" | sed -e 's/{{/${/g' -e 's/}}/}/g')
-
-# Take care of commands starting with an if block
-if [[ "$MODIFIED_STARTUP" == if* ]]; then
-    MODIFIED_STARTUP=$(echo ";$MODIFIED_STARTUP" | eval echo "$(cat -)" | tail -n +2)
-else
-    MODIFIED_STARTUP=$(echo "$MODIFIED_STARTUP" | eval echo "$(cat -)")
-fi
+MODIFIED_STARTUP=$(echo "${STARTUP}" | sed -e 's/{{/${/g' -e 's/}}/}/g' | eval echo "$(cat -)")
 
 # Display the command we're running in the output, and then execute it with the env
 # from the container itself.
 printf "\033[1m\033[33mcontainer@pterodactyl~ \033[0m%s\n" "$MODIFIED_STARTUP"
+
 # shellcheck disable=SC2086
 eval ${MODIFIED_STARTUP}
