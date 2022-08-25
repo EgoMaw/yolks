@@ -15,7 +15,6 @@ RUN         dpkg --add-architecture i386 \
                 tzdata \
                 locales \
                 iproute2 \
-                gettext-base \
                 ca-certificates \
                 libssl-dev \
                 lib32gcc-s1 \
