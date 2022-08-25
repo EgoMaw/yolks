@@ -3,7 +3,7 @@ FROM        --platform=$TARGETOS/$TARGETARCH python:3.10-slim
 LABEL       author="EgoMaw" maintainer="egomaw@dedicatedmc.io"
 
 RUN         apt update \
-            && apt -y install git gcc g++ ca-certificates dnsutils curl iproute2 ffmpeg procps \
+            && apt install -y gettext-base git gcc g++ ca-certificates dnsutils curl iproute2 ffmpeg procps \
             && useradd -m -d /home/container container
 
 USER        container

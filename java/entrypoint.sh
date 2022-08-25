@@ -33,6 +33,11 @@ export INTERNAL_IP
 # Switch to the container's working directory
 cd /home/container || exit 1
 
+# Prevent git terminal prompts if .git exists
+if [ -d /home/container/.git ]; then
+    export GIT_TERMINAL_PROMPT=0
+fi
+
 # Print Java version
 printf "\033[1m\033[33mcontainer@pterodactyl~ \033[0mjava -version\n"
 java -version
@@ -40,10 +45,17 @@ java -version
 # Convert all of the "{{VARIABLE}}" parts of the command into the expected shell
 # variable format of "${VARIABLE}" before evaluating the string and automatically
 # replacing the values.
-PARSED=$(echo "${STARTUP}" | sed -e 's/{{/${/g' -e 's/}}/}/g')
+MODIFIED_STARTUP=$(echo "${STARTUP}" | sed -e 's/{{/${/g' -e 's/}}/}/g' | envsubst)
+
+# Take care of commands starting with an if block
+if [[ "$MODIFIED_STARTUP" == if* ]]; then
+    MODIFIED_STARTUP=$(echo ";$MODIFIED_STARTUP" | eval echo "$(cat -)" | tail -n +2)
+else
+    MODIFIED_STARTUP=$(echo "$MODIFIED_STARTUP" | eval echo "$(cat -)")
+fi
 
 # Display the command we're running in the output, and then execute it with the env
 # from the container itself.
-printf "\033[1m\033[33mcontainer@pterodactyl~ \033[0m%s\n" "$PARSED"
+printf "\033[1m\033[33mcontainer@pterodactyl~ \033[0m%s\n" "$MODIFIED_STARTUP"
 # shellcheck disable=SC2086
-eval ${PARSED}
+eval ${MODIFIED_STARTUP}

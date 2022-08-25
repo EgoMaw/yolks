@@ -8,9 +8,19 @@ export INTERNAL_IP
 # Print current Rust version
 cargo --version
 
-# Replace Startup Variables
-MODIFIED_STARTUP=$(echo -e $(echo -e ${STARTUP} | sed -e 's/{{/${/g' -e 's/}}/}/g'))
-echo -e ":/home/container$ ${MODIFIED_STARTUP}"
+# Convert all of the "{{VARIABLE}}" parts of the command into the expected shell
+# variable format of "${VARIABLE}" before evaluating the string and automatically
+# replacing the values.
+MODIFIED_STARTUP=$(echo "${STARTUP}" | sed -e 's/{{/${/g' -e 's/}}/}/g' | envsubst)
+
+# Take care of commands starting with an if block
+if [[ "$MODIFIED_STARTUP" == if* ]]; then
+    MODIFIED_STARTUP=$(echo ";$MODIFIED_STARTUP" | eval echo "$(cat -)" | tail -n +2)
+else
+    MODIFIED_STARTUP=$(echo "$MODIFIED_STARTUP" | eval echo "$(cat -)")
+fi
+
+echo ":/home/container$ ${MODIFIED_STARTUP}"
 
 # Run the Server
 eval ${MODIFIED_STARTUP}
