@@ -5,10 +5,8 @@ LABEL       author="EgoMaw" maintainer="egomaw@dedicatedmc.io"
 ENV         DEBIAN_FRONTEND noninteractive
 
 RUN        apt update -y \
-            && apt upgrade -y \
-            && apt install -y wget \
             && wget https://packages.microsoft.com/config/debian/11/packages-microsoft-prod.deb -O packages-microsoft-prod.deb \
-            && dpkg -i packages-microsoft-prod.deb \
+            && sudo dpkg -i packages-microsoft-prod.deb \
             && rm packages-microsoft-prod.deb \
             && apt update -y \
             && install -y aspnetcore-runtime-5.0
