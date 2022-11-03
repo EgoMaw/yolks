@@ -59,6 +59,12 @@ these images on an arm system, no modification to them or the tag is needed, the
   * `ghcr.io/egomaw/yolks:go_1.15`
 * [`Go 1.16`](/go/1.16)
   * `ghcr.io/egomaw/yolks:go_1.16`
+* [`go1.17`](/go/1.17)
+  * `ghcr.io/egomaw/yolks:go_1.17`
+* [`Go 1.18`](/go/1.18)
+  * `ghcr.io/egomaw/yolks:go_1.18`
+* [`Go 1.19`](/go/1.19)
+  * `ghcr.io/egomaw/yolks:go_1.19`
 
 ### [Java](/java)
 
@@ -108,6 +114,8 @@ Replace {{distribution}} with the one you want from above.
   * `ghcr.io/egomaw/yolks:mongodb_4`
 * [`MongoDB 5`](/mongodb/5)
   * `ghcr.io/egomaw/yolks:mongodb_5`
+* [`MongoDB 6`](/mongodb/6)
+  * `ghcr.io/egomaw/yolks:mongodb_6`
 
 ### [Nodejs](/nodejs)
 
