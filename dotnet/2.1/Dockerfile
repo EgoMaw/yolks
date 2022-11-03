@@ -6,8 +6,12 @@ ENV         DEBIAN_FRONTEND noninteractive
 
 RUN        apt update -y \
             && apt upgrade -y \
-            && apt install -y libgdiplus libc6 libgcc-s1 libgssapi-krb5-2 libicu52 libicu57 libicu63 libicu67 libssl1.0.0 libssl1.1 libstdc++6 zlib1g \
-            && curl -sSL https://dot.net/v1/dotnet-install.sh | bash -s -- -c 2.1 --runtime aspnetcore --install-dir /usr/share/dotnet/
+            && apt install -y wget \
+            && wget https://packages.microsoft.com/config/debian/11/packages-microsoft-prod.deb -O packages-microsoft-prod.deb \
+            && dpkg -i packages-microsoft-prod.deb \
+            && rm packages-microsoft-prod.deb \
+            && apt update -y \
+            && install -y aspnetcore-runtime-2.1
 
 USER        container
 ENV         USER=container HOME=/home/container
