@@ -1,14 +1,12 @@
 #!/bin/bash
 # Default the TZ environment variable to UTC.
-TZ=${TZ:-UTC}
-export TZ
+export TZ=${TZ:-UTC}
 
-# Set environment variable that holds the Internal Docker IP
-INTERNAL_IP=$(ip route get 1 | awk '{print $NF;exit}')
-export INTERNAL_IP
+# Default the DOTNET_ROOT environment variable to /usr/share/dotnet.
+export DOTNET_ROOT=${DOTNET_ROOT:-/usr/share/dotnet}
 
 # Make internal Docker IP address available to processes.
-export INTERNAL_IP=`ip route get 1 | awk '{print $NF;exit}'`
+export INTERNAL_IP=$(ip route get 1 | awk '{print $NF;exit}')
 
 # Print Java version
 printf "\033[1m\033[33mcontainer@pterodactyl~ \033[0mdotnet --list-runtimes\n"
