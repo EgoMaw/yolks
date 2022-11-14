@@ -20,7 +20,7 @@
 # SOFTWARE.
 #
 
-FROM        --platform=$TARGETOS/$TARGETARCH openjdk:11-jre-bullseye
+FROM        --platform=$TARGETOS/$TARGETARCH openjdk:11-jre-slim-bullseye
 
 LABEL       author="EgoMaw" maintainer="egomaw@dedicatedmc.io"
 
@@ -30,8 +30,8 @@ LABEL       org.opencontainers.image.licenses=MIT
 ENV         DEBIAN_FRONTEND=noninteractive
 ENV         PATH="/root/.local/bin:${PATH}"
 
-RUN        apt update && apt upgrade -y \
-        && apt -y --no-install-recommends install ca-certificates curl git unzip zip tar jq python3 dos2unix
+RUN        apt-get update && apt-get upgrade -y
+RUN        apt-get -y --no-install-recommends install ca-certificates curl git unzip zip tar jq python3 dos2unix
 
 RUN	   version=$(curl -s https://api.github.com/repos/mikefarah/yq/releases/latest | jq -r '.tag_name') \
         && curl "https://github.com/mikefarah/yq/releases/download/${version}/yq_linux_amd64" -sSLo /usr/bin/yq \
