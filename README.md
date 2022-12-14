@@ -44,12 +44,12 @@ these images on an arm system, no modification to them or the tag is needed, the
 
 ### [Games](/games)
 
-* [`altv`](/games/altv)
-  * `ghcr.io/egomaw/games:altv`
 * [`arma3`](/games/arma3)
   * `ghcr.io/egomaw/games:arma3`
 * [`source`](/games/source)
   * `ghcr.io/egomaw/games:source`
+* [`valheim`](/games/valheim)
+  * `ghcr.io/egomaw/games:valheim`
 
 ### [Golang](/go)
 
@@ -179,3 +179,5 @@ Replace {{distribution}} with the one you want from above.
   * `ghcr.io/egomaw/installers:debian`
 * [`Debian w Java Installer`](/installers/debian-java)
   * `ghcr.io/egomaw/installers:debian-java`
+* [`Ubuntu Installer`](/installers/ubuntu)
+  * `ghcr.io/parkervcp/installers:ubuntu`
