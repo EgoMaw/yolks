@@ -8,6 +8,8 @@ LABEL       org.opencontainers.image.licenses=MIT
 RUN         apk add --update --no-cache ca-certificates curl git openssl sqlite tar tzdata \
 				&& adduser -D -h /home/container container
 
+RUN			mix local.hex --force && mix local.rebar --force
+
 USER        container
 ENV         USER=container HOME=/home/container
 WORKDIR     /home/container

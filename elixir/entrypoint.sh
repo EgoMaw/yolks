@@ -19,7 +19,6 @@ elixir --version
 # replacing the values.
 PARSED=$(echo "${STARTUP}" | sed -e 's/{{/${/g' -e 's/}}/}/g' | eval echo "$(cat -)")
 
-mix local.hex --force
 mix deps.get
 
 # Display the command we're running in the output, and then execute it with the env
