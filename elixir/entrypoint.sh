@@ -11,9 +11,7 @@ export INTERNAL_IP
 cd /home/container || exit 1
 
 # Print Erlang's version
-printf "\033[1m\033[33mcontainer@pterodactyl~ \033[0merl -noshell -eval 'erlang:display(erlang:system_info(system_version))' -eval 'init:stop()'\n"
-erl -noshell -eval 'erlang:display(erlang:system_info(system_version))' -eval 'init:stop()'
-printf "elixir --version"
+printf "elixir --version\n"
 elixir --version
 
 # Convert all of the "{{VARIABLE}}" parts of the command into the expected shell
@@ -21,6 +19,7 @@ elixir --version
 # replacing the values.
 PARSED=$(echo "${STARTUP}" | sed -e 's/{{/${/g' -e 's/}}/}/g' | eval echo "$(cat -)")
 
+mix local.hex --force
 mix deps.get
 
 # Display the command we're running in the output, and then execute it with the env
