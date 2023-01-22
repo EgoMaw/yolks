@@ -1,4 +1,4 @@
-FROM        --platform=$TARGETOS/$TARGETARCH openjdk:19-slim-bullseye
+FROM        --platform=$TARGETOS/$TARGETARCH openjdk:20-slim-bullseye
 
 LABEL       author="EgoMaw" maintainer="egomaw@dedicatedmc.io"
 

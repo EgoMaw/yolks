@@ -1,4 +1,4 @@
-FROM        --platform=$TARGETOS/$TARGETARCH eclipse-temurin:19-jdk-focal
+FROM        --platform=$TARGETOS/$TARGETARCH eclipse-temurin:20-jdk-focal
 
 LABEL       author="EgoMaw" maintainer="egomaw@dedicatedmc.io"
 
