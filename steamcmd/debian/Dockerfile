@@ -15,7 +15,7 @@ RUN         dpkg --add-architecture i386 \
 
 ## install rcon
 RUN         cd /tmp/ \
-            && version=$(curl -s https://api.github.com/repos/gorcon/rcon-cli/releases/latest | jq -r '.tag_name' | cut -c 1-) \
+            && version=$(curl -s https://api.github.com/repos/gorcon/rcon-cli/releases/latest | jq -r '.tag_name' | cut -c 2-)\
             && curl -sSL https://github.com/gorcon/rcon-cli/releases/download/v${version}/rcon-${version}-amd64_linux.tar.gz > rcon.tar.gz \
             && tar xvf rcon.tar.gz \
             && mv rcon-${version}-amd64_linux/rcon /usr/local/bin/
