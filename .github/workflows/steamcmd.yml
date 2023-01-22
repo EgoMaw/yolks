@@ -1,4 +1,4 @@
-name: build rust
+name: build steamcmd
 on:
   workflow_dispatch:
   schedule:
@@ -7,37 +7,35 @@ on:
     branches:
       - master
     paths:
-      - rust/**
+      - steamcmd/**
 jobs:
   push:
-    name: "yolks:rust_${{ matrix.tag }}"
+    name: "steamcmd:${{ matrix.distro }}"
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
-        tag:
-          - '1.31'
-          - '1.56'
-          - '1.60'
-          - 'latest'
+        distro:
+          - debian
+          - ubuntu
+          - dotnet
+      
     steps:
       - uses: actions/checkout@v3
-      # Setup QEMU for ARM64 Build
-      - uses: docker/setup-qemu-action@v2          
       - uses: docker/setup-buildx-action@v2
         with:
-          version: "latest"
+          version: "v0.9.1"
           buildkitd-flags: --debug
       - uses: docker/login-action@v2
         with:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          password: ${{ secrets.REGISTRY_TOKEN }}
       - uses: docker/build-push-action@v3
         with:
-          context: ./rust
-          file: ./rust/${{ matrix.tag }}/Dockerfile
-          platforms: linux/amd64,linux/arm64
+          context: ./steamcmd
+          file: ./steamcmd/${{ matrix.distro }}/Dockerfile
+          platforms: linux/amd64
           push: true
           tags: |
-            ghcr.io/egomaw/yolks:rust_${{ matrix.tag }}
+            ghcr.io/parkervcp/steamcmd:${{ matrix.distro }}

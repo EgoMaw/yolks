@@ -1,6 +1,3 @@
-# ----------------------------------
-# Generic Wine 6 image
-# ----------------------------------
 FROM    ghcr.io/egomaw/yolks:debian
 
 LABEL   author="EgoMaw" maintainer="egomaw@dedicatedmc.io"
