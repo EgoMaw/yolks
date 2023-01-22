@@ -50,6 +50,8 @@ jobs:
         with:
           version: "latest"
           buildkitd-flags: --debug
+          driver-opts: |
+            image=moby/buildkit:v0.10.6
 
       - uses: docker/login-action@v2
         if:  ${{ steps.check_files.outputs.files_exists == 'true' }}
