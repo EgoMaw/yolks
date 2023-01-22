@@ -158,6 +158,15 @@ Replace {{distribution}} with the one you want from above.
 * [`Python 3.11`](/python/3.11)
   * `ghcr.io/egomaw/yolks:python_3.11`
 
+### [SteamCMD](/steamcmd)
+
+* [`SteamCMD Debian lastest`](/steamcmd/debian)
+  * `ghcr.io/egomaw/steamcmd:debian`
+* [`SteamCMD Debian Dotnet`](/steamcmd/dotnet)
+  * `ghcr.io/egomaw/steamcmd:dotnet`
+* [`SteamCMD Ubuntu latest LTS`](/steamcmd/ubuntu)
+  * `ghcr.io/egomaw/steamcmd:ubuntu`
+
 ### [Wine](/wine)
 
 * [`Wine Stable`](/wine/stable)
@@ -180,4 +189,4 @@ Replace {{distribution}} with the one you want from above.
 * [`Debian w Java Installer`](/installers/debian-java)
   * `ghcr.io/egomaw/installers:debian-java`
 * [`Ubuntu Installer`](/installers/ubuntu)
-  * `ghcr.io/parkervcp/installers:ubuntu`
+  * `ghcr.io/egomaw/installers:ubuntu`

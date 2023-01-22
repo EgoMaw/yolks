@@ -3,7 +3,7 @@
 # ---------------------------------------
 FROM    ghcr.io/parkervcp/yolks:debian
 
-LABEL   author="Michael Parker" maintainer="parker@pterodactyl.io"
+LABEL   author="EgoMaw" maintainer="egomaw@dedicatedmc.io"
 
 ## install required packages
 RUN     dpkg --add-architecture i386 \

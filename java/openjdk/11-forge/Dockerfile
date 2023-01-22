@@ -10,7 +10,7 @@ FROM        --platform=$TARGETOS/$TARGETARCH openjdk:11.0.13-slim-bullseye
 
 LABEL       author="EgoMaw" maintainer="egomaw@dedicatedmc.io"
 
-LABEL       org.opencontainers.image.source="https://github.com/pterodactyl/yolks"
+LABEL       org.opencontainers.image.source="https://github.com/egomaw/yolks"
 LABEL       org.opencontainers.image.licenses=MIT
 
 RUN         apt update -y \

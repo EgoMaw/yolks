@@ -1,8 +1,8 @@
-FROM        --platform=$TARGETOS/$TARGETARCH eclipse-temurin:11-jdk-focal
+FROM        --platform=$TARGETOS/$TARGETARCH eclipse-temurin:11-focal
 
 LABEL       author="EgoMaw" maintainer="egomaw@dedicatedmc.io"
 
-LABEL       org.opencontainers.image.source="https://github.com/pterodactyl/yolks"
+LABEL       org.opencontainers.image.source="https://github.com/egomaw/yolks"
 LABEL       org.opencontainers.image.licenses=MIT
 
 RUN         apt update -y \
