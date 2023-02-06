@@ -57,7 +57,7 @@ jobs:
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - uses: docker/build-push-action@v3
+      - uses: docker/build-push-action@v4
         if:  ${{ steps.check_files.outputs.files_exists == 'true' }}
         with:
           context: ./java
