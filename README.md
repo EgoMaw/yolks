@@ -164,6 +164,8 @@ Replace {{distribution}} with the one you want from above.
   * `ghcr.io/egomaw/steamcmd:debian`
 * [`SteamCMD Debian Dotnet`](/steamcmd/dotnet)
   * `ghcr.io/egomaw/steamcmd:dotnet`
+* [`SteamCMD Proton`](/steamcmd/proton)
+  * `ghcr.io/egomaw/steamcmd:proton`
 * [`SteamCMD Ubuntu latest LTS`](/steamcmd/ubuntu)
   * `ghcr.io/egomaw/steamcmd:ubuntu`
 
