@@ -3,13 +3,13 @@
 # ---------------------------------------------
 FROM        debian:bullseye-slim
 
-LABEL       author="Torsten Widmann" maintainer="info@goover.de"
+LABEL       author="EgoMaw" maintainer="egomaw@dedicatedmc.io"
 
 ## install required packages
 RUN         dpkg --add-architecture i386
 RUN         apt update
 RUN         apt install -y --no-install-recommends wget iproute2 gnupg2 software-properties-common libntlm0 winbind xvfb xauth libncurses5-dev:i386 libncurses6 dbus libgdiplus lib32gcc-s1
-RUN         apt install -y alsa-tools libpulse0 pulseaudio libpulse-dev libasound2 libao-common gnutls-bin gnupg locales numactl cabextract curl python3 python3-pip python3-setuptools
+RUN         apt install -y alsa-tools libpulse0 pulseaudio libpulse-dev libasound2 libao-common gnutls-bin gnupg locales numactl cabextract curl python3 python3-pip python3-setuptools jq
 RUN         useradd -d /home/container -m container
 
 # Download Proton GE
@@ -31,10 +31,11 @@ RUN	        wget -q -O /usr/sbin/winetricks https://raw.githubusercontent.com/Wi
             && chmod +x /usr/sbin/winetricks
 
 ## install rcon
-RUN         cd /tmp/ \
-            && curl -sSL https://github.com/gorcon/rcon-cli/releases/download/v0.10.2/rcon-0.10.2-amd64_linux.tar.gz > rcon.tar.gz \
+RUN     	cd /tmp/ \
+            && version=$(curl -s https://api.github.com/repos/gorcon/rcon-cli/releases/latest | jq -r '.tag_name' | cut -c 2-) \
+            && curl -sSL https://github.com/gorcon/rcon-cli/releases/download/v${version}/rcon-${version}-amd64_linux.tar.gz > rcon.tar.gz \
             && tar xvf rcon.tar.gz \
-            && mv rcon-0.10.2-amd64_linux/rcon /usr/local/bin/
+            && mv rcon-${version}-amd64_linux/rcon /usr/local/bin/
 
 USER        container
 ENV         USER=container HOME=/home/container
