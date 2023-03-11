@@ -19,6 +19,7 @@ jobs:
         - temurin
         - zulu
         - openjdk
+        - amazoncorretto
         tag:
           - 8
           - 8-forge
@@ -27,7 +28,6 @@ jobs:
           - 16
           - 17
           - 19
-          - 20
     steps:
 
       - name: Checkout Repository

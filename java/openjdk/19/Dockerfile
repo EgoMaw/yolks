@@ -1,4 +1,4 @@
-FROM        --platform=$TARGETOS/$TARGETARCH azul/zulu-openjdk-debian:16
+FROM        --platform=$TARGETOS/$TARGETARCH openjdk:19-slim-bullseye
 
 LABEL       author="EgoMaw" maintainer="egomaw@dedicatedmc.io"
 

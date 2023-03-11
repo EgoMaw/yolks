@@ -1,12 +1,12 @@
-FROM        --platform=$TARGETOS/$TARGETARCH openjdk:20-slim-bullseye
+FROM        --platform=$TARGETOS/$TARGETARCH amazoncorretto:19
 
 LABEL       author="EgoMaw" maintainer="egomaw@dedicatedmc.io"
 
 LABEL       org.opencontainers.image.source="https://github.com/egomaw/yolks"
 LABEL       org.opencontainers.image.licenses=MIT
 
-RUN         apt update -y \
-						&& apt install -y curl ca-certificates openssl git tar sqlite3 fontconfig tzdata iproute2 libfreetype6 \
+RUN         yum check-updates -y \
+						&& yum install -y curl ca-certificates openssl git tar sqlite3 fontconfig tzdata iproute2 libfreetype6 \
 						&& useradd -d /home/container -m container
 
 USER        container

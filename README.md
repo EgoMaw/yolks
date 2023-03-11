@@ -68,7 +68,7 @@ these images on an arm system, no modification to them or the tag is needed, the
 
 ### [Java](/java)
 
-There are 3 different Java distributions used,`temurin`, `zulu` and `openjdk`.  
+There are 3 different Java distributions used,`temurin`, `zulu`, `openjdk` and `amazoncorretto`.  
 Replace {{distribution}} with the one you want from above.  
 **Be Wary though** Not all distributions support all versions, check the folders inside the java folder to be sure.
 
