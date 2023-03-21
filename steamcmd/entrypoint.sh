@@ -42,6 +42,10 @@ else
     echo -e "user set to ${STEAM_USER}"
 fi
 
+if [[ $XVFB == 1 ]]; then
+        Xvfb :0 -screen 0 "${DISPLAY_WIDTH}x${DISPLAY_HEIGHT}x${DISPLAY_DEPTH}" &
+fi
+
 ## if auto_update is not set or to 1 update
 if [ -z ${AUTO_UPDATE} ] || [ "${AUTO_UPDATE}" == "1" ]; then 
     # Update Source Server
