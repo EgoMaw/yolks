@@ -28,6 +28,7 @@ jobs:
           - 16
           - 17
           - 19
+          - 20
     steps:
 
       - name: Checkout Repository
