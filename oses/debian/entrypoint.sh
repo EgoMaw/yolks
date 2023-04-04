@@ -9,8 +9,4 @@ MODIFIED_STARTUP=$(echo "${STARTUP}" | sed -e 's/{{/${/g' -e 's/}}/}/g' | envsub
 echo -e ":/home/container$ ${MODIFIED_STARTUP}"
 
 # Run the Server
-if [[ $MODIFIED_STARTUP = "if ["*  ]]; then
-    eval "$MODIFIED_STARTUP"
-else
-    exec $MODIFIED_STARTUP
-fi;
+eval "$MODIFIED_STARTUP"
