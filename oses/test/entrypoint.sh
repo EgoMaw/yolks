@@ -9,6 +9,8 @@ echo -e "$PRE_STARTUP_SCRIPT"
 
 PRE_STARTUP_SCRIPT=$(echo "${PRE_STARTUP_SCRIPT}" | sed -e 's/{{/${/g' -e 's/}}/}/g' | envsubst)
 
+echo -e "$PRE_STARTUP_SCRIPT"
+
 printf "\033[1m\033[33mcontainer@pterodactyl~ \033[0mRunning Preflight Script...\n"
 eval "$PRE_STARTUP_SCRIPT"
 fi
@@ -18,4 +20,4 @@ MODIFIED_STARTUP=$(echo "${STARTUP}" | sed -e 's/{{/${/g' -e 's/}}/}/g' | envsub
 echo -e ":/home/container$ ${MODIFIED_STARTUP}"
 
 # Run the Server
-exec "$MODIFIED_STARTUP"
+eval "$MODIFIED_STARTUP"
