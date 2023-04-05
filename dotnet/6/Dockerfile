@@ -9,7 +9,7 @@ RUN        apt update -y \
             && dpkg -i packages-microsoft-prod.deb \
             && rm packages-microsoft-prod.deb \
             && apt update -y \
-            && apt install -y aspnetcore-runtime-6.0
+            && apt install -y aspnetcore-runtime-6.0 gettext-base
 
 USER        container
 ENV         USER=container HOME=/home/container

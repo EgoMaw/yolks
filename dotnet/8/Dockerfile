@@ -5,11 +5,9 @@ LABEL       author="EgoMaw" maintainer="egomaw@dedicatedmc.io"
 ENV         DEBIAN_FRONTEND noninteractive
 
 RUN        apt update -y \
-            && wget https://packages.microsoft.com/config/debian/11/packages-microsoft-prod.deb -O packages-microsoft-prod.deb \
-            && dpkg -i packages-microsoft-prod.deb \
-            && rm packages-microsoft-prod.deb \
-            && apt update -y \
-            && apt install -y gettext-base aspnetcore-runtime-3.1
+            && apt upgrade -y \
+            && apt install -y libgdiplus gettext-base \
+            && curl -sSL https://dot.net/v1/dotnet-install.sh | bash -s -- -c 8.0 --runtime aspnetcore --install-dir /usr/share/dotnet
 
 USER        container
 ENV         USER=container HOME=/home/container

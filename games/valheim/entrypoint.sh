@@ -38,9 +38,17 @@ envsubst < /passwd.template > ${NSS_WRAPPER_PASSWD}
 
 export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libnss_wrapper.so
 
+# Run Preflight Script
+if [ -n "$PRE_STARTUP_SCRIPT" ]; then
+PRE_STARTUP_SCRIPT=$(echo "${PRE_STARTUP_SCRIPT}" | sed -e 's/{{/${/g' -e 's/}}/}/g' | envsubst)
+printf "\033[1;31mcontainer@pterodactyl~\033[0m Running Preflight Script...\n"
+eval "$PRE_STARTUP_SCRIPT"
+echo -e " "
+fi
+
 # Replace Startup Variables
 MODIFIED_STARTUP=$(echo -e ${STARTUP} | sed -e 's/{{/${/g' -e 's/}}/}/g')
 echo -e ":/home/container$ ${MODIFIED_STARTUP}"
 
 # Run the Server
-eval ${MODIFIED_STARTUP}
+eval $MODIFIED_STARTUP

@@ -8,7 +8,7 @@ LABEL       author="EgoMaw" maintainer="egomaw@dedicatedmc.io"
 ENV         DEBIAN_FRONTEND noninteractive
 
 RUN         apt update -y \
-            && apt install -y netcat \
+            && apt install -y gettext-base netcat \
             && useradd -d /home/container -m container -s /bin/bash
 
 USER        container

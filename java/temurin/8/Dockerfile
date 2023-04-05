@@ -6,7 +6,7 @@ LABEL       org.opencontainers.image.source="https://github.com/egomaw/yolks"
 LABEL       org.opencontainers.image.licenses=MIT
 
 RUN         apt update -y \
-			&& apt install -y iputils-ping curl ca-certificates openssl git tar sqlite3 fontconfig tzdata iproute2 libfreetype6 \
+			&& apt install -y gettext-base iputils-ping curl ca-certificates openssl git tar sqlite3 fontconfig tzdata iproute2 libfreetype6 \
 						&& useradd -d /home/container -m container
 
 USER        container

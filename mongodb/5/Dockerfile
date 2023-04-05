@@ -8,7 +8,7 @@ LABEL       author="EgoMaw" maintainer="egomaw@dedicatedmc.io"
 ENV         DEBIAN_FRONTEND noninteractive
 
 RUN         apt update -y \
-            && apt install -y netcat iproute2 \
+            && apt install -y gettext-base netcat iproute2 \
             && useradd -d /home/container -m container -s /bin/bash
 
 USER        container

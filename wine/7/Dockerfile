@@ -1,14 +1,14 @@
-# ---------------------------------------
-# Generic Wine image based on Wine staging 
-# ---------------------------------------
-FROM    ghcr.io/parkervcp/yolks:debian
+# ----------------------------------
+# Generic Wine 6 image
+# ----------------------------------
+FROM    ghcr.io/egomaw/yolks:debian
 
 LABEL   author="EgoMaw" maintainer="egomaw@dedicatedmc.io"
 
 ## install required packages
 RUN     dpkg --add-architecture i386 \
         && apt update -y \
-        && apt install -y --no-install-recommends gnupg2 tzdata numactl software-properties-common libntlm0 winbind xvfb xauth python3 libncurses5:i386 libncurses6:i386 libsdl2-2.0-0 libsdl2-2.0-0:i386 gettext-base
+        && apt install -y --no-install-recommends gnupg2 software-properties-common libntlm0 winbind xvfb xauth python3 libncurses5:i386 libncurses6:i386 gettext-base gettext-base
 
 # Install winehq-stable and with recommends
 RUN     wget -nc https://dl.winehq.org/wine-builds/winehq.key \
@@ -17,10 +17,10 @@ RUN     wget -nc https://dl.winehq.org/wine-builds/winehq.key \
         && wget -O- -q download.opensuse.org/repositories/Emulators:/Wine:/Debian/Debian_11/Release.key | apt-key add - \
         && echo "deb http://download.opensuse.org/repositories/Emulators:/Wine:/Debian/Debian_11 ./" | tee /etc/apt/sources.list.d/wine-obs.list \
         && apt update \
-		&& apt install -y --install-recommends winehq-staging cabextract
+        && apt install -y --install-recommends winehq-stable=7.0.2~bullseye-1 wine-stable=7.0.2~bullseye-1 wine-stable-amd64=7.0.2~bullseye-1 wine-stable-i386=7.0.2~bullseye-1 cabextract xvfb
 
 # Set up Winetricks
-RUN	    wget -q -O /usr/sbin/winetricks https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks \
+RUN	wget -q -O /usr/sbin/winetricks https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks \
         && chmod +x /usr/sbin/winetricks
 
 ENV     HOME=/home/container
@@ -36,5 +36,5 @@ ENV     XVFB=1
 USER    container
 WORKDIR	/home/container
 
-COPY        ./../entrypoint.sh /entrypoint.sh
-CMD         [ "/bin/bash", "/entrypoint.sh" ]
+COPY    ./../entrypoint.sh /entrypoint.sh
+CMD	["/bin/bash", "/entrypoint.sh"]

@@ -41,6 +41,8 @@ these images on an arm system, no modification to them or the tag is needed, the
   * `ghcr.io/egomaw/yolks:dotnet_6`
 * [`DotNet 7.0`](/dotnet/7)
   * `ghcr.io/egomaw/yolks:dotnet_7`
+* [`DotNet 8.0`](/dotnet/8)
+  * `ghcr.io/egomaw/yolks:dotnet_8`
 
 ### [Games](/games)
 
@@ -65,6 +67,8 @@ these images on an arm system, no modification to them or the tag is needed, the
   * `ghcr.io/egomaw/yolks:go_1.18`
 * [`Go 1.19`](/go/1.19)
   * `ghcr.io/egomaw/yolks:go_1.19`
+* [`Go 1.20`](/go/1.20)
+  * `ghcr.io/egomaw/yolks:go_1.20`
 
 ### [Java](/java)
 
@@ -94,6 +98,8 @@ Replace {{distribution}} with the one you want from above.
   * `ghcr.io/egomaw/yolks:java_{{distribution}}_18`
 * [`Java 19`](/java/19)
   * `ghcr.io/egomaw/yolks:java_{{distribution}}_19`
+* [`Java 20`](/java/20)
+  * `ghcr.io/egomaw/yolks:java_{{distribution}}_20`
 
 ### [MariaDB](/mariadb)
 
@@ -175,6 +181,8 @@ Replace {{distribution}} with the one you want from above.
   * `ghcr.io/egomaw/yolks:wine_stable`
 * [`Wine Staging`](/wine/staging)
   * `ghcr.io/egomaw/yolks:wine_staging`
+* [`Wine 7`](/wine/7)
+  * `ghcr.io/egomaw/yolks:wine_7`
 * [`Wine 6`](/wine/6)
   * `ghcr.io/egomaw/yolks:wine_6`
 * [`Wine 5`](/wine/5)

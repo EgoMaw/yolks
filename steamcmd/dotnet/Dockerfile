@@ -1,4 +1,4 @@
-FROM    --platform=$TARGETOS/$TARGETARCH debian:bullseye-slim
+FROM    --platform=$TARGETOS/$TARGETARCH ghcr.io/egomaw/yolks:debian
 
 LABEL   author="EgoMaw" maintainer="egomaw@dedicatedmc.io"
 

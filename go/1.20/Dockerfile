@@ -1,6 +1,4 @@
-
-
-FROM        --platform=$TARGETOS/$TARGETARCH golang:1.17-alpine
+FROM        --platform=$TARGETOS/$TARGETARCH golang:1.20-alpine
 
 LABEL       author="EgoMaw" maintainer="egomaw@dedicatedmc.io"
 

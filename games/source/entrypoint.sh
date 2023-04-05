@@ -45,6 +45,14 @@ else
     echo -e "Not updating game server as auto update was set to 0. Starting Server"
 fi
 
+# Run Preflight Script
+if [ -n "$PRE_STARTUP_SCRIPT" ]; then
+PRE_STARTUP_SCRIPT=$(echo "${PRE_STARTUP_SCRIPT}" | sed -e 's/{{/${/g' -e 's/}}/}/g' | envsubst)
+printf "\033[1;31mcontainer@pterodactyl~\033[0m Running Preflight Script...\n"
+eval "$PRE_STARTUP_SCRIPT"
+echo -e " "
+fi
+
 # Replace Startup Variables
 MODIFIED_STARTUP=$(echo ${STARTUP} | sed -e 's/{{/${/g' -e 's/}}/}/g')
 echo -e ":/home/container$ ${MODIFIED_STARTUP}"
