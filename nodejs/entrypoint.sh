@@ -13,7 +13,9 @@ fi
 if [ -n "$PRE_STARTUP_SCRIPT" ]; then
 PRE_STARTUP_SCRIPT=$(echo "${PRE_STARTUP_SCRIPT}" | sed -e 's/{{/${/g' -e 's/}}/}/g' | envsubst)
 printf "\033[1;31mcontainer@pterodactyl~\033[0m Running Preflight Script...\n"
-eval "$PRE_STARTUP_SCRIPT"
+printf "%s\n" "$PRE_STARTUP_SCRIPT" > preflight.sh
+# shellcheck source=/dev/null
+source preflight.sh
 echo -e " "
 fi
 
