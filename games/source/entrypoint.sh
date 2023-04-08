@@ -51,8 +51,7 @@ PRE_STARTUP_SCRIPT=$(echo "${PRE_STARTUP_SCRIPT}" | sed -e 's/{{/${/g' -e 's/}}/
 printf "\033[1;31mcontainer@pterodactyl~\033[0m Running Preflight Script...\n"
 printf "%s\n" "$PRE_STARTUP_SCRIPT" > preflight.sh
 # shellcheck source=/dev/null
-chmod a+x ./preflight.sh
-./preflight.sh
+source ./preflight.sh
 echo -e " "
 fi
 
