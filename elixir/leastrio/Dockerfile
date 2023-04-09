@@ -5,7 +5,7 @@ LABEL       author="EgoMaw" maintainer="egomaw@dedicatedmc.io"
 LABEL       org.opencontainers.image.source="https://github.com/egomaw/yolks"
 LABEL       org.opencontainers.image.licenses=MIT
 
-RUN         apk add --update --no-cache ca-certificates curl git openssl sqlite tar tzdata \
+RUN         apk add --update --no-cache ca-certificates curl git openssl sqlite tar tzdata gettext \
 				&& adduser -D -h /home/container container
 
 RUN			mix local.hex --force && mix local.rebar --force
