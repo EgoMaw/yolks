@@ -25,7 +25,8 @@ echo -e " "
 
 # Run Preflight Script
 if [ -n "$PRE_STARTUP_SCRIPT" ]; then
-PRE_STARTUP_SCRIPT=$(echo "${PRE_STARTUP_SCRIPT}" | sed -e 's/{{/${/g' -e 's/}}/}/g' | envsubst)
+PRE_STARTUP_SCRIPT=$(echo "${PRE_STARTUP_SCRIPT}" | sed -e 's/{{/${/g' -e 's/}}/}/g')
+echo -e "${PRE_STARTUP_SCRIPT}"
 printf "\033[1;31mcontainer@pterodactyl~\033[0m Running Preflight Script...\n"
 eval "${PRE_STARTUP_SCRIPT}"
 fi
