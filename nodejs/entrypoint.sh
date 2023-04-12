@@ -9,6 +9,10 @@ if [ -d /home/container/.git ]; then
     export GIT_TERMINAL_PROMPT=0
 fi
 
+# Print Node.js Version
+printf "\033[1m\033[33mcontainer@pterodactyl~ \033[0mnode -v\n"
+node -v
+
 # Run Preflight Script
 if [ -n "$PRE_STARTUP_SCRIPT" ]; then
 PRE_STARTUP_SCRIPT=$(echo "${PRE_STARTUP_SCRIPT}" | sed -e 's/{{/${/g' -e 's/}}/}/g')
@@ -16,10 +20,6 @@ PRE_STARTUP_SCRIPT=$(echo "${PRE_STARTUP_SCRIPT}" | sed -e 's/{{/${/g' -e 's/}}/
 printf "\033[1;31mcontainer@pterodactyl~\033[0m Running Preflight Script...\n"
 eval "${PRE_STARTUP_SCRIPT}"
 fi
-
-# Print Node.js Version
-printf "\033[1m\033[33mcontainer@pterodactyl~ \033[0mnode -v\n"
-node -v
 
 # Convert all of the "{{VARIABLE}}" parts of the command into the expected shell
 # variable format of "${VARIABLE}" before evaluating the string and automatically
