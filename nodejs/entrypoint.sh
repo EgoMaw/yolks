@@ -26,7 +26,7 @@ node -v
 # replacing the values.
 MODIFIED_STARTUP=$(echo "${STARTUP}" | sed -e 's/{{/${/g' -e 's/}}/}/g' | envsubst)
 
-echo ":/home/container$ ${MODIFIED_STARTUP}"
+printf "\033[1;33mcontainer@pterodactyl~ \033[0m%s\n" "$MODIFIED_STARTUP"
 
 # Run the Server
-eval ${MODIFIED_STARTUP}
+exec ${MODIFIED_STARTUP}
