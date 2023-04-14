@@ -5,7 +5,7 @@ RUN         apt update \
             && apt -y --no-install-recommends install gettext-base ffmpeg iproute2 git sqlite3 libsqlite3-dev python3 python3-dev ca-certificates dnsutils tzdata zip tar curl build-essential libtool \
             && useradd -m -d /home/container container
 
-RUN         npm install npm@latest -g && corepack prepare --all
+RUN         npm install npm@latest -g && corepack prepare pnpm@latest npm@latest yarn@stable && corepack enable
 
 USER        container
 ENV         USER=container HOME=/home/container
