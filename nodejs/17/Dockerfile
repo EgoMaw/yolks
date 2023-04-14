@@ -7,7 +7,7 @@ RUN         apt update \
             # npm@latest does not support node 17  && npm -g install npm@latest \
             && useradd -m -d /home/container container
 
-RUN         corepack prepare pnpm@latest npm@latest yarn@stable --activate && corepack enable
+RUN         npm i -g corepack@latest && corepack prepare pnpm@latest npm@latest yarn@stable --activate && corepack enable
 
 USER        container
 ENV         USER=container HOME=/home/container
