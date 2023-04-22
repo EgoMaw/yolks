@@ -113,6 +113,8 @@ Replace {{distribution}} with the one you want from above.
   * `ghcr.io/egomaw/yolks:mariadb_10.6`
 * [`MariaDB 10.7`](/mariadb/10.7)
   * `ghcr.io/egomaw/yolks:mariadb_10.7`
+* [`MariaDB 10.11`](/mariadb/10.11)
+  * `ghcr.io/egomaw/yolks:mariadb_10.11`
 
 ### [MongoDB](/mongodb)
 
