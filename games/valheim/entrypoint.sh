@@ -47,8 +47,8 @@ eval "${PRE_STARTUP_SCRIPT}"
 fi
 
 # Replace Startup Variables
-MODIFIED_STARTUP=$(echo -e ${STARTUP} | sed -e 's/{{/${/g' -e 's/}}/}/g')
-echo -e ":/home/container$ ${MODIFIED_STARTUP}"
+MODIFIED_STARTUP=$(echo -e ${STARTUP} | sed -e 's/{{/${/g' -e 's/}}/}/g' | envsubst)
+printf "\033[1;33mcontainer@pterodactyl~ \033[0m%s\n" "$MODIFIED_STARTUP"
 
 # Run the Server
-eval $MODIFIED_STARTUP
+exec ${MODIFIED_STARTUP}
