@@ -8,9 +8,9 @@ LABEL       org.opencontainers.image.licenses=MIT
 ## Update base packages and install dependencies
 ENV         DEBIAN_FRONTEND=noninteractive
 RUN         dpkg --add-architecture i386 \
-            && apt-get-get update \
-            && apt-get-get upgrade -y \
-            && apt-get-get install -y \
+            && apt-get update \
+            && apt-get upgrade -y \
+            && apt-get install -y \
                 curl \
                 tzdata \
                 locales \
