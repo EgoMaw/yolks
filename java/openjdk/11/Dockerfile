@@ -5,8 +5,8 @@ LABEL       author="EgoMaw" maintainer="egomaw@dedicatedmc.io"
 LABEL       org.opencontainers.image.source="https://github.com/egomaw/yolks"
 LABEL       org.opencontainers.image.licenses=MIT
 
-RUN         apt update -y \
-						&& apt install -y gettext-base jq curl lsof ca-certificates openssl git tar sqlite3 fontconfig tzdata iproute2 libfreetype6 \
+RUN         apt-get update -y \
+						&& apt-get install -y gettext-base jq curl lsof ca-certificates openssl git tar sqlite3 fontconfig tzdata iproute2 libfreetype6 \
 						&& useradd -d /home/container -m container
 
 USER        container

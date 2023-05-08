@@ -4,12 +4,12 @@ LABEL       author="EgoMaw" maintainer="egomaw@dedicatedmc.io"
 
 ENV         DEBIAN_FRONTEND noninteractive
 
-RUN        apt update -y \
+RUN        apt-get update -y \
             && wget https://packages.microsoft.com/config/debian/11/packages-microsoft-prod.deb -O packages-microsoft-prod.deb \
             && dpkg -i packages-microsoft-prod.deb \
             && rm packages-microsoft-prod.deb \
-            && apt update -y \
-            && apt install -y aspnetcore-runtime-6.0 gettext-base
+            && apt-get update -y \
+            && apt-get install -y aspnetcore-runtime-6.0 gettext-base
 
 USER        container
 ENV         USER=container HOME=/home/container
