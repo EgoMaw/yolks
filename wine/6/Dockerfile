@@ -12,9 +12,9 @@ RUN     dpkg --add-architecture i386 \
 
 # Install winehq-stable and with recommends
 RUN     wget -nc https://dl.winehq.org/wine-builds/winehq.key \
-        && apt-get-key add winehq.key \
+        && apt-key add winehq.key \
         && echo "deb https://dl.winehq.org/wine-builds/debian/ bullseye main" >> /etc/apt-get/sources.list \
-        && wget -O- -q download.opensuse.org/repositories/Emulators:/Wine:/Debian/Debian_11/Release.key | apt-get-key add - \
+        && wget -O- -q download.opensuse.org/repositories/Emulators:/Wine:/Debian/Debian_11/Release.key | apt-key add - \
         && echo "deb http://download.opensuse.org/repositories/Emulators:/Wine:/Debian/Debian_11 ./" | tee /etc/apt-get/sources.list.d/wine-obs.list \
         && apt-get update \
         && apt-get install -y --install-recommends winehq-stable=6.0.4~bullseye-1 wine-stable=6.0.4~bullseye-1 wine-stable-amd64=6.0.4~bullseye-1 wine-stable-i386=6.0.4~bullseye-1 cabextract xvfb
