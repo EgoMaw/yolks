@@ -21,3 +21,4 @@ jobs:
           package-name: "${{ matrix.package }}"
           package-type: "container"
           delete-only-untagged-versions: "true"
+          token: ${{ secrets.token }}
