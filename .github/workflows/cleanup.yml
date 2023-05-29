@@ -2,7 +2,7 @@ name: Cleanup Old Versions
 on:
   workflow_dispatch:
   schedule:
-    - cron: "30 0 * * 1"
+    - cron: "30 * * * *"
 jobs:
   cleanup:
     name: "${{ matrix.package }} cleanup"
