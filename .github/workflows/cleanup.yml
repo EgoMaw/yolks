@@ -2,7 +2,7 @@ name: Cleanup Old Versions
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 0 * * 1"
+    - cron: "10 * * * *"
 jobs:
   cleanup:
     name: "${{ matrix.package }} cleanup"
@@ -20,5 +20,7 @@ jobs:
         with:
           package-name: "${{ matrix.package }}"
           package-type: "container"
-          min-versions-to-keep: 5
+          min-versions-to-keep: 2
           delete-only-untagged-versions: "true"
+          
+          token: ${{ secrets.token }}
