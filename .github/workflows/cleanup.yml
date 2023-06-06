@@ -11,16 +11,16 @@ jobs:
       fail-fast: false
       matrix:
         package:
-          #- yolks
-          #- games
-          #- installers
-          #- steamcmd
+          - yolks
+          - games
+          - installers
+          - steamcmd
           - java
     steps:
       - uses: actions/delete-package-versions@v4
         with:
           package-name: "${{ matrix.package }}"
           package-type: "container"
-          min-versions-to-keep: 0
-          delete-only-untagged-versions: false
+          min-versions-to-keep: 400
+          delete-only-untagged-versions: true
           token: ${{ secrets.token }}

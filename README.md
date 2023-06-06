@@ -77,29 +77,29 @@ Replace {{distribution}} with the one you want from above.
 **Be Wary though** Not all distributions support all versions, check the folders inside the java folder to be sure.
 
 * [`Java 7`](/java/7)
-  * `ghcr.io/egomaw/yolks:java_{{distribution}}_7`
+  * `ghcr.io/egomaw/java:{{distribution}}_7`
 * [`Java 8`](/java/8)
-  * `ghcr.io/egomaw/yolks:java_{{distribution}}_8`
+  * `ghcr.io/egomaw/java:{{distribution}}_8`
 * [`Java 8 Forge`](/java/8-forge)
-  * `ghcr.io/egomaw/yolks:java_{{distribution}}_8-forge`
+  * `ghcr.io/egomaw/java:{{distribution}}_8-forge`
 * [`Java 9`](/java/9)
-  * `ghcr.io/egomaw/yolks:java_{{distribution}}_9`
+  * `ghcr.io/egomaw/java:{{distribution}}_9`
 * [`Java 11`](/java/11)
-  * `ghcr.io/egomaw/yolks:java_{{distribution}}_11`
+  * `ghcr.io/egomaw/java:{{distribution}}_11`
 * [`Java 11 Forge`](/java/11-forge)
-  * `ghcr.io/egomaw/yolks:java_{{distribution}}_11-forge`
+  * `ghcr.io/egomaw/java:{{distribution}}_11-forge`
 * [`Java 14`](/java/14)
-  * `ghcr.io/egomaw/yolks:java_{{distribution}}_14`
+  * `ghcr.io/egomaw/java:{{distribution}}_14`
 * [`Java 16`](/java/16)
-  * `ghcr.io/egomaw/yolks:java_{{distribution}}_16`
+  * `ghcr.io/egomaw/java:{{distribution}}_16`
 * [`Java 17`](/java/17)
-  * `ghcr.io/egomaw/yolks:java_{{distribution}}_17`
+  * `ghcr.io/egomaw/java:{{distribution}}_17`
 * [`Java 18`](/java/18)
-  * `ghcr.io/egomaw/yolks:java_{{distribution}}_18`
+  * `ghcr.io/egomaw/java:{{distribution}}_18`
 * [`Java 19`](/java/19)
-  * `ghcr.io/egomaw/yolks:java_{{distribution}}_19`
+  * `ghcr.io/egomaw/java:{{distribution}}_19`
 * [`Java 20`](/java/20)
-  * `ghcr.io/egomaw/yolks:java_{{distribution}}_20`
+  * `ghcr.io/egomaw/java:{{distribution}}_20`
 
 ### [MariaDB](/mariadb)
 
