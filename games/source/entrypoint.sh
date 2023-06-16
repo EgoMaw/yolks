@@ -54,7 +54,7 @@ eval "${PRE_STARTUP_SCRIPT}"
 fi
 
 # Replace Startup Variables
-MODIFIED_STARTUP=$(echo ${STARTUP} | sed -e 's/{{/${/g' -e 's/}}/}/g')
+MODIFIED_STARTUP=$(echo ${STARTUP} | sed -e 's/{{/${/g' -e 's/}}/}/g | envsubst')
 echo -e ":/home/container$ ${MODIFIED_STARTUP}"
 
 # Run the Server
