@@ -11,7 +11,7 @@ RUN         apt-get update -y \
 
 RUN          curl -sSL https://download.oracle.com/graalvm/20/latest/graalvm-jdk-20_linux-x64_bin.tar.gz -o java.tar.gz \
 				&& mkdir -p /tmp/java && tar -vxzf java.tar.gz -C /tmp/java \
-				&& mv /tmp/java/$(ls /tmp/java) /usr/local/graalvm
+				&& mv /tmp/java/$(ls /tmp/java) /usr/local/graalvm && rm java.tar.gz
 
 USER        container
 ENV         JAVA_HOME=/usr/local/graalvm
