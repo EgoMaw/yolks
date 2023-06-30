@@ -1,4 +1,4 @@
-FROM  --platform=$TARGETOS/$TARGETARCH ubuntu:22.04
+FROM  --platform=$TARGETOS/$TARGETARCH debian:stable-slim
 
 LABEL author="EgoMaw" maintainer="egomaw@dedicatedmc.io"
 
