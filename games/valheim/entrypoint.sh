@@ -21,7 +21,7 @@ fi
 if [ "${AUTO_UPDATE}" == "1" ]; then
     # Update Source Server
     if [ -n "${SRCDS_APPID}" ]; then
-        ./steamcmd/steamcmd.sh +force_install_dir /home/container +login "${STEAM_USER}" "${STEAM_PASS}" "${STEAM_AUTH}" "$( [[ "${WINDOWS_INSTALL}" == "1" ]] && printf %s '+@sSteamCmdForcePlatformType windows' )" +app_update "${SRCDS_APPID}" "$( [[ -z ${SRCDS_BETAID} ]] || printf %s "-beta ${SRCDS_BETAID}" )" "$( [[ -z ${SRCDS_BETAPASS} ]] || printf %s "-betapassword ${SRCDS_BETAPASS}" )" "$( [[ -z ${HLDS_GAME} ]] || printf %s "+app_set_config 90 mod ${HLDS_GAME}" )" "$( [[ -z ${VALIDATE} ]] || printf %s "validate" )" +quit
+        ./steamcmd/steamcmd.sh +force_install_dir /home/container +login ${STEAM_USER} ${STEAM_PASS} ${STEAM_AUTH} $( [[ "${WINDOWS_INSTALL}" == "1" ]] && printf %s '+@sSteamCmdForcePlatformType windows' ) +app_update ${SRCDS_APPID} $( [[ -z ${SRCDS_BETAID} ]] || printf %s "-beta ${SRCDS_BETAID}" ) $( [[ -z ${SRCDS_BETAPASS} ]] || printf %s "-betapassword ${SRCDS_BETAPASS}" ) $( [[ -z ${HLDS_GAME} ]] || printf %s "+app_set_config 90 mod ${HLDS_GAME}" ) $( [[ -z ${VALIDATE} ]] || printf %s "validate" ) +quit
     else
         echo -e "No appid set. Starting Server"
     fi
@@ -47,8 +47,8 @@ eval "${PRE_STARTUP_SCRIPT}"
 fi
 
 # Replace Startup Variables
-MODIFIED_STARTUP=$(echo -e "${STARTUP}" | sed -e 's/{{/${/g' -e 's/}}/}/g' | envsubst)
-printf "\033[1;33mcontainer@pterodactyl~ \033[0m%s\n" "$MODIFIED_STARTUP"
+MODIFIED_STARTUP=$(echo -e "${STARTUP}" | sed -e 's/{{/${/g' -e 's/}}/}/g')
+printf "\033[1;33mcontainer@pterodactyl~ \033[0m%s\n" "$(echo "$MODIFIED_STARTUP" | envsubst)"
 
 # Run the Server
 eval "${MODIFIED_STARTUP}"
