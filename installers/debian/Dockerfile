@@ -31,5 +31,12 @@ ENV         DEBIAN_FRONTEND=noninteractive
 
 RUN         dpkg --add-architecture i386 \
 				&& apt-get update \
-				&& apt-get upgrade -y \
-				&& apt-get -y --no-install-recommends install ca-certificates curl wget lib32gcc-s1 lib32stdc++6 libsdl2-2.0-0 libsdl2-2.0-0:i386 git unzip zip tar jq dos2unix xz-utils libtbbmalloc2 libtbbmalloc2:i386 lib32z1
+				&& apt-get upgrade -y --no-install-recommends \
+				&& apt-get -y --no-install-recommends install ca-certificates curl wget lib32gcc-s1 lib32stdc++6 libsdl2-2.0-0 libsdl2-2.0-0:i386 git unzip zip tar jq dos2unix xz-utils libtbbmalloc2 libtbbmalloc2:i386 lib32z1 \
+				&& apt-get --purge autoremove
+
+
+RUN         cd /tmp/ \
+            && version=$(curl -s https://api.github.com/repos/itzg/restify/releases/latest | jq -r '.tag_name') \
+            && curl -sSL https://github.com/itzg/restify/releases/download/${version}/restify_${version}_linux_amd64.tar.gz -o restify.tar.gz \
+            && tar xvf restify.tar.gz -C /usr/local/bin/ && rm restify.tar.gz && chmod +x /usr/local/bin/restify
