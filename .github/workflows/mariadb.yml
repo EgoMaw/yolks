@@ -23,6 +23,7 @@ jobs:
           - '10.6'
           - '10.7'
           - '10.11'
+          - '11.0'
     steps:
       - uses: actions/checkout@v3
       - uses: docker/setup-qemu-action@v2
