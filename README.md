@@ -115,6 +115,8 @@ Replace {{distribution}} with the one you want from above.
   * `ghcr.io/egomaw/yolks:mariadb_10.7`
 * [`MariaDB 10.11`](/mariadb/10.11)
   * `ghcr.io/egomaw/yolks:mariadb_10.11`
+* [`MariaDB 11.0`](/mariadb/11.0)
+  * `ghcr.io/egomaw/yolks:mariadb_11.0`
 
 ### [MongoDB](/mongodb)
 
@@ -137,6 +139,8 @@ Replace {{distribution}} with the one you want from above.
   * `ghcr.io/egomaw/yolks:nodejs_17`
 * [`Node 18`](/nodejs/18)
   * `ghcr.io/egomaw/yolks:nodejs_18`
+* [`Node 19`](/nodejs/19)
+  * `ghcr.io/egomaw/yolks:nodejs_19`
 
 ### [PostgreSQL](/postgres)
 

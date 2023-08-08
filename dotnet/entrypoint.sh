@@ -8,7 +8,7 @@ export DOTNET_ROOT=${DOTNET_ROOT:-/usr/share/dotnet}
 # Make internal Docker IP address available to processes.
 export INTERNAL_IP=$(ip route get 1 | awk '{print $NF;exit}')
 
-# Print Java version
+# Print dotnet version
 printf "\033[1m\033[33mcontainer@pterodactyl~ \033[0mdotnet --list-runtimes\n"
 dotnet --list-runtimes
 

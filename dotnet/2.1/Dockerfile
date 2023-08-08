@@ -4,12 +4,14 @@ LABEL       author="EgoMaw" maintainer="egomaw@dedicatedmc.io"
 
 ENV         DEBIAN_FRONTEND noninteractive
 
-RUN        apt-get update -y \
-            && wget https://packages.microsoft.com/config/debian/11/packages-microsoft-prod.deb -O packages-microsoft-prod.deb \
-            && dpkg -i packages-microsoft-prod.deb \
-            && rm packages-microsoft-prod.deb \
-            && apt-get update -y \
-            && apt-get install -y gettext-base aspnetcore-runtime-2.1
+RUN         apt update -y \
+            && apt upgrade -y \
+            && apt install -y apt-transport-https wget curl iproute2 libgdiplus gettext-base \
+            && wget https://dot.net/v1/dotnet-install.sh \
+            && D_V="$(curl -sSL https://dotnet.microsoft.com/en-us/download/dotnet/2.1 | grep -i  '<h3 id="sdk-2.*">SDK 2.1.*</h3>'  | head -1 | awk -F\" '{print $3}' | awk '{print $2;}' | sed 's/<\/h3>//g')" \ 
+            && chmod +x dotnet-install.sh \
+			&& ./dotnet-install.sh -i /usr/share -v $D_V \
+            && ln -s /usr/share/dotnet /usr/bin/dotnet
 
 USER        container
 ENV         USER=container HOME=/home/container
