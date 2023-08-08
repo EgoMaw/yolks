@@ -29,6 +29,6 @@ RUN          update-locale lang=en_US.UTF-8 \
 
 WORKDIR     /home/container
 
-COPY        ./entrypoint.sh /entrypoint.sh
+COPY       --chown=container --chmod=500 ./entrypoint.sh /entrypoint.sh
 CMD         [ "/bin/bash", "/entrypoint.sh" ]
 

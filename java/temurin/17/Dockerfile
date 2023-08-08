@@ -1,4 +1,4 @@
-FROM        --platform=$TARGETOS/$TARGETARCH eclipse-temurin:17-focal
+FROM        --platform=$TARGETOS/$TARGETARCH eclipse-temurin:17
 
 LABEL       author="EgoMaw" maintainer="egomaw@dedicatedmc.io"
 
