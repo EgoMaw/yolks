@@ -10,7 +10,7 @@ on:
       - java/**
 jobs:
   push:
-    name: "yolks:java_${{ matrix.jdk }}_${{ matrix.tag }}"
+    name: "java:${{ matrix.jdk }}_${{ matrix.tag }}"
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
