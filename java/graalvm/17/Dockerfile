@@ -19,5 +19,5 @@ ENV         PATH=$PATH:$JAVA_HOME/bin
 ENV         USER=container HOME=/home/container
 WORKDIR     /home/container
 
-COPY       ./../../entrypoint.sh /entrypoint.sh
+COPY       --chown=container --chmod=555 ./../../entrypoint.sh /entrypoint.sh
 CMD         [ "/bin/bash", "/entrypoint.sh" ]
