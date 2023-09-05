@@ -6,8 +6,8 @@ ENV         DEBIAN_FRONTEND noninteractive
 
 RUN        apt-get update -y \
             && apt-get upgrade -y \
-            && apt-get install -y --no-install-recommends apt-transport-https wget curl iproute2 libgdiplus gettext-base \
-            && curl -sSL https://dot.net/v1/dotnet-install.sh | bash -s -- -c 7.0 --runtime aspnetcore --install-dir /usr/share
+            && apt-get install -y --no-install-recommends apt-transport-https curl iproute2 libgdiplus gettext-base \
+            && curl -sSL https://dot.net/v1/dotnet-install.sh | bash -s -- -c 7.0 --runtime aspnetcore --install-dir /usr/share \
             && ln -s /usr/share/dotnet /usr/bin/dotnet
 
 USER        container
