@@ -42,7 +42,7 @@ jobs:
         with:
           files: "./java/${{ matrix.jdk }}/${{ matrix.tag }}/Dockerfile"
 
-      - uses: docker/setup-qemu-action@v2
+      - uses: docker/setup-qemu-action@v3
         if:  ${{ steps.check_files.outputs.files_exists == 'true' }}
 
       - uses: docker/setup-buildx-action@v2
