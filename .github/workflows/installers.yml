@@ -19,6 +19,7 @@ jobs:
           - alpine
           - debian
           - debian-java
+          - debian-java-17
           - ubuntu
     steps:
       - uses: actions/checkout@v3
