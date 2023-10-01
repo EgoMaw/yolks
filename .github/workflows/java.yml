@@ -45,7 +45,7 @@ jobs:
       - uses: docker/setup-qemu-action@v3
         if:  ${{ steps.check_files.outputs.files_exists == 'true' }}
 
-      - uses: docker/setup-buildx-action@v2
+      - uses: docker/setup-buildx-action@v3
         if:  ${{ steps.check_files.outputs.files_exists == 'true' }}
         with:
           buildkitd-flags: --debug
