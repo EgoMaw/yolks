@@ -22,15 +22,16 @@ jobs:
         - amazoncorretto
         - graalvm
         tag:
-          - 8
-          - 8-forge
-          - 11
-          - 11-forge
-          - 16
-          - 17
-          - 18
-          - 19
-          - 20
+          - '8'
+          - '8-forge'
+          - '11'
+          - '11-forge'
+          - '16'
+          - '17'
+          - '18'
+          - '19'
+          - '20'
+          - '21'
     steps:
 
       - name: Checkout Repository

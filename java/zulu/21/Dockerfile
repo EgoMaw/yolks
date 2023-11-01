@@ -1,13 +1,13 @@
-FROM        --platform=$TARGETOS/$TARGETARCH amazoncorretto:19
+FROM        --platform=$TARGETOS/$TARGETARCH azul/zulu-openjdk-debian:21
 
 LABEL       author="EgoMaw" maintainer="egomaw@dedicatedmc.io"
 
 LABEL       org.opencontainers.image.source="https://github.com/egomaw/yolks"
 LABEL       org.opencontainers.image.licenses=MIT
 
-RUN         yum check-update || true
-RUN	        yum install -y curl lsof ca-certificates openssl git tar sqlite3 fontconfig tzdata iproute libfreetype6 gettext jq
-RUN 		useradd -d /home/container -m container
+RUN         apt-get update -y \
+						&& apt-get install --no-install-recommends -y gettext-base jq curl ca-certificates openssl git tar sqlite3 fontconfig tzdata iproute2 libfreetype6 \
+						&& useradd -d /home/container -m container
 
 USER        container
 ENV         USER=container HOME=/home/container
