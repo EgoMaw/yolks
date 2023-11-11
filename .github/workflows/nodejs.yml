@@ -17,11 +17,11 @@ jobs:
       matrix:
         tag:
           #- 12 - DEPRECATED
-          - 14
-          - 16
-          - 17
-          - 18
-          - 19
+          - '14'
+          - '18'
+          - '19'
+          - '20'
+          - '21'
     steps:
       - uses: actions/checkout@v4
       # Setup QEMU for ARM64 Build
