@@ -7,6 +7,10 @@ RUN         apt update \
             && useradd -m -d /home/container container
 
 RUN         npm install npm@latest -g
+RUN         npm install -g corepack
+RUN         corepack enable
+RUN         corepack prepare pnpm@latest npm@latest yarn@stable --activate
+
 
 USER        container
 ENV         USER=container HOME=/home/container
