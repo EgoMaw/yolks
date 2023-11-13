@@ -9,7 +9,8 @@ LABEL       author="EgoMaw" maintainer="egomaw@dedicatedmc.io"
 RUN         dpkg --add-architecture i386
 RUN         apt-get update
 RUN         apt-get install -y --no-install-recommends wget iproute2 gnupg2 software-properties-common libntlm0 winbind xvfb xauth libncurses5-dev:i386 libncurses6 dbus libgdiplus lib32gcc-s1
-RUN         apt-get install -y --no-install-recommends alsa-tools libpulse0 pulseaudio libpulse-dev libasound2 libao-common gnutls-bin gnupg locales numactl cabextract curl python3 python3-pip python3-setuptools jq gettext-base
+RUN         apt-get install -y --no-install-recommends alsa-tools libpulse0 pulseaudio libpulse-dev libasound2 libao-common gnutls-bin gnupg locales numactl cabextract curl
+RUN         apt-get install -y --no-install-recommends python3 python3-pip python3-setuptools pipx jq gettext-base
 RUN         useradd -d /home/container -m container
 
 # Download Proton GE
@@ -24,7 +25,7 @@ RUN         rm /var/lib/dbus/machine-id
 RUN         dbus-uuidgen --ensure
 
 #Setup Protontricks
-RUN         python3 -m pip install protontricks
+RUN         pipx install protontricks
 
 # Set up Winetricks
 RUN	        wget -q -O /usr/sbin/winetricks https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks \
