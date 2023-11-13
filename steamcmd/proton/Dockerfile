@@ -13,9 +13,9 @@ RUN         apt-get install -y alsa-tools libpulse0 pulseaudio libpulse-dev liba
 RUN         useradd -d /home/container -m container
 
 # Download Proton GE
-RUN         curl -sLOJ $(curl -s https://api.github.com/repos/GloriousEggroll/proton-ge-custom/releases/latest | grep browser_download_url | cut -d\" -f4 | egrep .tar.gz)
-RUN         tar -xzf GE-Proton*.tar.gz -C /usr/local/bin/ --strip-components=1
-RUN         rm GE-Proton*.*
+RUN         curl -sSL -o "proton.tar.gz" "$(curl -sSL https://api.github.com/repos/GloriousEggroll/proton-ge-custom/releases/latest | jq -r '.assets[] | select(.browser_download_url | endswith(".tar.gz")) | .browser_download_url')"
+RUN         tar -xzf proton.tar.gz -C /usr/local/bin/ --strip-components=1
+RUN         rm proton.tar.gz
 
 # Proton Fix machine-id
 RUN         rm -f /etc/machine-id
