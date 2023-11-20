@@ -15,9 +15,8 @@ LABEL       org.opencontainers.image.licenses=MIT
 
 RUN         yum check-update || true \
 			&& yum install -y curl lsof ca-certificates iproute net-tools openssl git tar sqlite3 fontconfig tzdata freetype gettext jq \
-			&& yum -y clean all && rm -rf /var/cache && useradd -d /home/container -m container
-
-RUN         useradd -d /home/container -m container
+			&& yum -y clean all && rm -rf /var/cache \
+			&& useradd -d /home/container -m container
 
 USER        container
 ENV         USER=container HOME=/home/container
