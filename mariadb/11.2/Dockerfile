@@ -1,7 +1,7 @@
 # -----------------------------------------------------
 # MariaDB Image for Pterodactyl
 # -----------------------------------------------------
-FROM        --platform=$TARGETOS/$TARGETARCH mariadb:10.6
+FROM        --platform=$TARGETOS/$TARGETARCH mariadb:11.2
 
 LABEL       author="EgoMaw" maintainer="egomaw@dedicatedmc.io"
 
