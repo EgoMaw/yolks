@@ -129,8 +129,6 @@ Replace {{distribution}} with the one you want from above.
 
 ### [Nodejs](/nodejs)
 
-* [`Node 12`](/nodejs/12)
-  * `ghcr.io/egomaw/yolks:nodejs_12`
 * [`Node 14`](/nodejs/14)
   * `ghcr.io/egomaw/yolks:nodejs_14`
 * [`Node 18`](/nodejs/18)
