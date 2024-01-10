@@ -46,8 +46,6 @@ these images on an arm system, no modification to them or the tag is needed, the
 
 ### [Games](/games)
 
-* [`arma3`](/games/arma3)
-  * `ghcr.io/egomaw/games:arma3`
 * [`source`](/games/source)
   * `ghcr.io/egomaw/games:source`
 * [`valheim`](/games/valheim)
