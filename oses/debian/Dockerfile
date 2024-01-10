@@ -23,8 +23,7 @@ RUN          apt-get install -y gcc g++ libgcc1 libc++-dev gdb libc-dev git wget
              liblua5.3-0 libz-dev rapidjson-dev tzdata libevent-dev libzip4 libprotobuf23 libevent-dev libfluidsynth2 gettext-base procps
 
 ## Configure locale
-RUN          update-locale lang=en_US.UTF-8 \
-             && dpkg-reconfigure --frontend noninteractive locales
+RUN          update-locale lang=en_US.UTF-8 && dpkg-reconfigure --frontend noninteractive locales
 
 
 WORKDIR     /home/container

@@ -5,6 +5,8 @@ LABEL       author="EgoMaw" maintainer="egomaw@dedicatedmc.io"
 LABEL       org.opencontainers.image.source="https://github.com/egomaw/yolks"
 LABEL       org.opencontainers.image.licenses=MIT
 
+RUN         update-locale lang=en_US.UTF-8 && dpkg-reconfigure --frontend noninteractive locales
+
 RUN         apt-get update -y \
 			&& apt-get install --no-install-recommends -y gettext-base jq curl ca-certificates openssl git tar sqlite3 fontconfig tzdata iproute2 libfreetype6 iputils-ping \
 			&& useradd -d /home/container -m container

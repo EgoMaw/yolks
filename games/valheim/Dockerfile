@@ -14,7 +14,7 @@ RUN     dpkg --add-architecture i386 \
                     libfontconfig locales libcurl3-gnutls libpulse-dev libpulse0 libnss-wrapper gettext jq wget unzip
 
 ## configure locale
-RUN     update-locale lang=en_US.UTF-8 &&   dpkg-reconfigure --frontend noninteractive locales
+RUN     update-locale lang=en_US.UTF-8 && dpkg-reconfigure --frontend noninteractive locales
 
 ENV     USER=container HOME=/home/container
 WORKDIR /home/container

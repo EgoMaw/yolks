@@ -18,8 +18,7 @@ RUN   apt-get install -y gettext-base gcc g++ libgcc1 libc++-dev gdb libc6 git w
 		libfluidsynth-dev libmariadb-dev libicu-dev libssl3 libduktape207 libjsoncpp-dev libleveldb1d libncurses5 libncursesw5
 
 ## configure locale
-RUN   update-locale lang=en_US.UTF-8 \
-        &&   dpkg-reconfigure --frontend noninteractive locales
+RUN   update-locale lang=en_US.UTF-8 && dpkg-reconfigure --frontend noninteractive locales
 
 WORKDIR /home/container
 

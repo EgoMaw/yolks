@@ -30,8 +30,7 @@ RUN         dpkg --add-architecture i386 \
                 libtbbmalloc2:i386
 
 ## Configure locale
-RUN         update-locale lang=en_US.UTF-8 \
-            && dpkg-reconfigure --frontend noninteractive locales
+RUN         update-locale lang=en_US.UTF-8 && dpkg-reconfigure --frontend noninteractive locales
 
 ## Prepare NSS Wrapper for the entrypoint as a workaround for Arma 3 requiring a valid UID
 ENV         NSS_WRAPPER_PASSWD=/tmp/passwd NSS_WRAPPER_GROUP=/tmp/group
