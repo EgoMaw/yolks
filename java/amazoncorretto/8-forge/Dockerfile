@@ -14,7 +14,7 @@ LABEL       org.opencontainers.image.source="https://github.com/egomaw/yolks"
 LABEL       org.opencontainers.image.licenses=MIT
 
 RUN         yum check-update || true \
-			&& yum install -y curl lsof ca-certificates iproute net-tools openssl git tar sqlite3 fontconfig tzdata freetype gettext jq \
+			&& yum install -y curl lsof ca-certificates iproute net-tools openssl git tar sqlite-devel fontconfig tzdata freetype gettext jq \
 			&& yum -y clean all && rm -rf /var/cache \
 			&& useradd -d /home/container -m container
 
