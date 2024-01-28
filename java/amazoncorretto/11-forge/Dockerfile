@@ -17,9 +17,14 @@ RUN         yum check-update || true \
 			&& yum install -y curl lsof ca-certificates iproute net-tools openssl git tar sqlite3 fontconfig tzdata freetype gettext jq \
 			&& yum -y clean all && rm -rf /var/cache && useradd -d /home/container -m container
 
+## install tini
+RUN         tini_link=$(curl -s https://api.github.com/repos/krallin/tini/releases/latest | jq -r '.assets | map(select(.name == "tini")) | .[] | .browser_download_url') \
+            && curl -sSLO --create-dirs --output-dir /usr/local/bin "$tini_link"
+
 USER        container
 ENV         USER=container HOME=/home/container
 WORKDIR     /home/container
 
 COPY       --chown=container --chmod=555 ./../../entrypoint.sh /entrypoint.sh
-CMD         [ "/bin/bash", "/entrypoint.sh" ]
+ENTRYPOINT    ["/usr/bin/tini", "-g", "--"]
+CMD         ["/entrypoint.sh"]
