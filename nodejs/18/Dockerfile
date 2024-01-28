@@ -4,7 +4,7 @@ LABEL       author="EgoMaw" maintainer="egomaw@dedicatedmc.io"
 LABEL       author="Michael Parker" maintainer="parker@pterodactyl.io"
 
 RUN         apt update \
-            && apt-get --no-install-recommends -y install ffmpeg iproute2 git sqlite3 libsqlite3-dev python3 python3-dev ca-certificates dnsutils tzdata zip tar curl build-essential libtool iputils-ping gettext-base \
+            && apt-get --no-install-recommends -y install ffmpeg iproute2 git sqlite3 libsqlite3-dev python3 python3-dev ca-certificates dnsutils tzdata zip tar curl build-essential libtool iputils-ping gettext-base tini \
             && useradd -m -d /home/container container && corepack enable && corepack prepare pnpm@latest npm@latest yarn@stable --activate
 
 USER        container
@@ -12,4 +12,5 @@ ENV         USER=container HOME=/home/container
 WORKDIR     /home/container
 
 COPY       --chown=container --chmod=555 ./../entrypoint.sh /entrypoint.sh
-CMD         [ "/bin/bash", "/entrypoint.sh" ]
+ENTRYPOINT    ["/usr/bin/tini", "-g", "--"]
+CMD         ["/entrypoint.sh"]
