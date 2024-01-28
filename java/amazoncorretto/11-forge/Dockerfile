@@ -19,7 +19,7 @@ RUN         yum check-update || true \
 
 ## install tini
 RUN         tini_link=$(curl -s https://api.github.com/repos/krallin/tini/releases/latest | jq -r '.assets | map(select(.name == "tini")) | .[] | .browser_download_url') \
-            && curl -sSLO --create-dirs --output-dir /usr/local/bin "$tini_link"
+            && curl -sSLO --create-dirs --output-dir /usr/local/bin "$tini_link" && chmod +x /usr/local/bin/tini
 
 USER        container
 ENV         USER=container HOME=/home/container
