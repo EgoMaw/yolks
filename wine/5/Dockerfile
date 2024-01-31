@@ -1,5 +1,5 @@
 # ----------------------------------
-# Generic Wine 6 image
+# Generic Wine 5 image
 # ----------------------------------
 FROM    ghcr.io/egomaw/yolks:debian
 

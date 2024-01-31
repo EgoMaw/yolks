@@ -1,7 +1,7 @@
 # ---------------------------------------
 # Generic Wine image based on Wine staging
 # ---------------------------------------
-FROM    ghcr.io/parkervcp/yolks:debian
+FROM    ghcr.io/egomaw/yolks:debian
 
 LABEL   author="EgoMaw" maintainer="egomaw@dedicatedmc.io"
 
