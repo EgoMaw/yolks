@@ -11,10 +11,11 @@ RUN     dpkg --add-architecture i386 \
         && apt-get install -y --no-install-recommends gnupg2 software-properties-common libntlm0 winbind xvfb xauth python3 libncurses5:i386 libncurses6:i386 gettext-base gettext-base
 
 # Install winehq-stable and with recommends
-RUN     wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key \
-        && wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/debian/dists/bookworm/winehq-bookworm.sources \
+RUN     mkdir -pm755 /etc/apt/keyrings \
+        && wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key \
+        && wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/debian/dists/bullseye/winehq-bullseye.sources \
         && apt-get update \
-        && apt-get install -y --install-recommends winehq-stable=7.0.2~bullseye-1 wine-stable=7.0.2~bullseye-1 wine-stable-amd64=7.0.2~bullseye-1 wine-stable-i386=7.0.2~bullseye-1 cabextract xvfb
+        && apt-get install -y --no-install-recommends winehq-stable=7.0.2~bullseye-1 wine-stable=7.0.2~bullseye-1 wine-stable-amd64=7.0.2~bullseye-1 wine-stable-i386=7.0.2~bullseye-1 cabextract xvfb
 
 # Set up Winetricks
 RUN	wget -q -O /usr/sbin/winetricks https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks \
