@@ -165,6 +165,8 @@ Replace {{distribution}} with the one you want from above.
   * `ghcr.io/egomaw/yolks:python_3.10`
 * [`Python 3.11`](/python/3.11)
   * `ghcr.io/egomaw/yolks:python_3.11`
+* [`Python 3.12`](/python/3.12)
+  * `ghcr.io/egomaw/yolks:python_3.12`
 
 ### [SteamCMD](/steamcmd)
 

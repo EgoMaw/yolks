@@ -1,10 +1,9 @@
-FROM        --platform=$TARGETOS/$TARGETARCH python:3.10-slim
+FROM        --platform=$TARGETOS/$TARGETARCH python:3.12-slim
 
 LABEL       author="EgoMaw" maintainer="egomaw@dedicatedmc.io"
 
 RUN         apt-get update \
-            && apt-get install -y --no-install-recommends gettext-base git gcc g++ ca-certificates dnsutils curl iproute2 ffmpeg procps\
-            gconf-service chromium chromium-driver wget\
+            && apt-get install -y --no-install-recommends gettext-base git gcc g++ ca-certificates dnsutils curl iproute2 ffmpeg procps \
             && useradd -m -d /home/container container
 
 USER        container
