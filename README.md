@@ -69,6 +69,8 @@ these images on an arm system, no modification to them or the tag is needed, the
   * `ghcr.io/egomaw/yolks:go_1.20`
 * [`Go 1.21`](/go/1.21)
   * `ghcr.io/egomaw/yolks:go_1.21`
+* [`Go 1.21`](/go/1.22)
+  * `ghcr.io/egomaw/yolks:go_1.22`
 
 ### [Java](/java)
 
@@ -111,8 +113,6 @@ Replace {{distribution}} with the one you want from above.
   * `ghcr.io/egomaw/yolks:mariadb_10.7`
 * [`MariaDB 10.11`](/mariadb/10.11)
   * `ghcr.io/egomaw/yolks:mariadb_10.11`
-* [`MariaDB 11.0`](/mariadb/11.0)
-  * `ghcr.io/egomaw/yolks:mariadb_11.0`
 * [`MariaDB 11.2`](/mariadb/11.2)
   * `ghcr.io/egomaw/yolks:mariadb_11.2`
 
@@ -154,13 +154,6 @@ Replace {{distribution}} with the one you want from above.
   * `ghcr.io/egomaw/yolks:postgres_14`
 
 ### [Python](/python)
-
-* [`Python 3.7`](/python/3.7)
-  * `ghcr.io/egomaw/yolks:python_3.7`
-* [`Python 3.8`](/python/3.8)
-  * `ghcr.io/egomaw/yolks:python_3.8`
-* [`Python 3.9`](/python/3.9)
-  * `ghcr.io/egomaw/yolks:python_3.9`
 * [`Python 3.10`](/python/3.10)
   * `ghcr.io/egomaw/yolks:python_3.10`
 * [`Python 3.11`](/python/3.11)
