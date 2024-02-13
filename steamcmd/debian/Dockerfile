@@ -14,8 +14,8 @@ RUN         dpkg --add-architecture i386 \
             && useradd -m -d /home/container container
 
 ## install rcon
-RUN         rcon_link=$(curl -s https://api.github.com/repos/gorcon/rcon-cli/releases/latest | jq -r '.assets | map(select(.browser_download_url | contains("amd64_linux.tar.gz"))) | .[] | .browser_download_url') \
-            && curl -sSL "$rcon_link" -o /tmp/rcon.tar.gz \
+RUN         rcon_link=$(curl -sSL https://api.github.com/repos/gorcon/rcon-cli/releases/latest | jq -r '.assets | map(select(.browser_download_url | contains("amd64_linux.tar.gz"))) | .[] | .browser_download_url') \
+            && wget "$rcon_link" -O /tmp/rcon.tar.gz \
             && tar xvf /tmp/rcon.tar.gz --strip-components 1 -C /usr/local/bin/ --wildcards --no-anchored '*rcon' && rm /tmp/rcon.tar.gz
 
 USER        container
