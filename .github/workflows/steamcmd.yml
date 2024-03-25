@@ -21,6 +21,7 @@ jobs:
           - dotnet
           - proton
           - scp
+          - sniper
     steps:
       - uses: actions/checkout@v4
       - uses: docker/setup-buildx-action@v3
