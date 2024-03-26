@@ -140,6 +140,13 @@ Replace {{distribution}} with the one you want from above.
 * [`Node 21`](/nodejs/21)
   * `ghcr.io/egomaw/yolks:nodejs_21`
 
+### [Bun](/bunjs)
+
+* [`Bun Stable`](/bunjs/stable)
+  * `ghcr.io/egomaw/yolks:bunjs_stable`
+* [`Bun Canary`](/bunjs/canary)
+  * `ghcr.io/egomaw/yolks:bunjs_canary`
+
 ### [PostgreSQL](/postgres)
 
 * [`Postgres 9`](/postgres/9)
