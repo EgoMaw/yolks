@@ -8,7 +8,8 @@ LABEL   author="EgoMaw" maintainer="egomaw@dedicatedmc.io"
 ## install required packages
 RUN     dpkg --add-architecture i386 \
         && apt-get update -y \
-        && apt-get install -y --no-install-recommends gnupg2 software-properties-common libntlm0 winbind xvfb xauth python3 libncurses5:i386 libncurses6:i386 gettext-base gettext-base
+        && apt-get install -y --no-install-recommends gnupg2 software-properties-common libntlm0 winbind xvfb xauth python3 libncurses5:i386 libncurses6:i386 gettext-base gettext-base \
+			&& apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Install winehq-stable and with recommends
 RUN     mkdir -pm755 /etc/apt/keyrings \
