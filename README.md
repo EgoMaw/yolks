@@ -106,6 +106,8 @@ Replace {{distribution}} with the one you want from above.
   * `ghcr.io/egomaw/java:{{distribution}}_20`
 * [`Java 21`](/java/21)
   * `ghcr.io/egomaw/java:{{distribution}}_21`
+* [`Java 22`](/java/22)
+  * `ghcr.io/egomaw/java:{{distribution}}_22`
 
 ### [MariaDB](/mariadb)
 
