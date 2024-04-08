@@ -1,4 +1,4 @@
-FROM        --platform=$TARGETOS/$TARGETARCH oven/bun:canary-slim
+FROM        --platform=$TARGETOS/$TARGETARCH oven/bun:slim
 LABEL       author="EgoMaw" maintainer="egomaw@dedicatedmc.io"
 
 RUN         apt-get update \
