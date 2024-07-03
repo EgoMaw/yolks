@@ -40,7 +40,6 @@ RUN         cd /tmp/ \
             && curl -sSL https://github.com/itzg/restify/releases/download/${version}/restify_${version}_linux_amd64.tar.gz -o restify.tar.gz \
             && tar xvf restify.tar.gz -C /usr/local/bin/ && rm restify.tar.gz && chmod +x /usr/local/bin/restify
 
-RUN         cd /tmp/ \
-            && version=$(curl -s https://api.github.com/repos/sibprogrammer/xq/releases/latest | jq -r '.tag_name') \
-            && curl -sSL https://github.com/sibprogrammer/xq/releases/download/${version}/xq_${version:1}_linux_amd64.tar.gz -o xq.tar.gz \
-            && tar xvf xq.tar.gz -C /usr/local/bin/ && rm xq.tar.gz && chmod +x /usr/local/bin/xq
+RUN        link=$(curl -s https://api.github.com/repos/sibprogrammer/xq/releases/latest | jq -r '.assets | map(select(.browser_download_url | contains("linux_amd64.tar.gz"))) | .[] | .browser_download_url') \
+            *& curl -sSL "$link" -o /tmp/rcon.tar.gz \
+            && tar xvf /tmp/xq.tar.gz -C /usr/local/bin/ && rm /tmp/xq.tar.gz && chmod +x /usr/local/bin/xq
