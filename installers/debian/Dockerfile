@@ -40,4 +40,7 @@ RUN         cd /tmp/ \
             && curl -sSL https://github.com/itzg/restify/releases/download/${version}/restify_${version}_linux_amd64.tar.gz -o restify.tar.gz \
             && tar xvf restify.tar.gz -C /usr/local/bin/ && rm restify.tar.gz && chmod +x /usr/local/bin/restify
 
-RUN    curl -sSL https://bit.ly/install-xq | sudo bash
+RUN         cd /tmp/ \
+            && version=$(curl -s https://api.github.com/repos/sibprogrammer/xq/releases/latest | jq -r '.tag_name') \
+            && curl -sSL https://github.com/sibprogrammer/xq/releases/download/${version}/xq_${version}${version}_linux_amd64.tar.gz  -o xq.tar.gz \
+            && tar xvf xq.tar.gz -C /usr/local/bin/ && rm xq.tar.gz && chmod +x /usr/local/bin/xq
