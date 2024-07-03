@@ -31,4 +31,9 @@ ENV         DEBIAN_FRONTEND=noninteractive
 
 RUN         apt-get update \
 		&& apt-get upgrade -y \
-		&& apt-get -y --no-install-recommends install ca-certificates curl git unzip zip tar jq xq
+		&& apt-get -y --no-install-recommends install ca-certificates curl git unzip zip tar jq
+
+RUN         cd /tmp/ \
+            && version=$(curl -s https://api.github.com/repos/sibprogrammer/xq/releases/latest | jq -r '.tag_name') \
+            && curl -sSL https://github.com/sibprogrammer/xq/releases/download/${version}/xq_${version}_linux_amd64.tar.gz  -o xq.tar.gz \
+            && tar xvf xq.tar.gz -C /usr/local/bin/ && rm xq.tar.gz && chmod +x /usr/local/bin/xq
