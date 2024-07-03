@@ -41,5 +41,5 @@ RUN         cd /tmp/ \
             && tar xvf restify.tar.gz -C /usr/local/bin/ && rm restify.tar.gz && chmod +x /usr/local/bin/restify
 
 RUN        link=$(curl -s https://api.github.com/repos/sibprogrammer/xq/releases/latest | jq -r '.assets | map(select(.browser_download_url | contains("linux_amd64.tar.gz"))) | .[] | .browser_download_url') \
-            *& curl -sSL "$link" -o /tmp/rcon.tar.gz \
+            && curl -sSL "$link" -o /tmp/rcon.tar.gz \
             && tar xvf /tmp/xq.tar.gz -C /usr/local/bin/ && rm /tmp/xq.tar.gz && chmod +x /usr/local/bin/xq
