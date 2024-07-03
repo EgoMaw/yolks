@@ -8,3 +8,6 @@ LABEL       org.opencontainers.image.source="https://github.com/egomaw/yolks"
 LABEL       org.opencontainers.image.licenses=MIT
 
 RUN         apk add --update --no-cache ca-certificates curl unzip tar git jq wget
+
+
+RUN    curl -sSL https://bit.ly/install-xq | sudo bash

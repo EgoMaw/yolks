@@ -38,3 +38,5 @@ RUN        apt-get update && apt-get upgrade --no-install-recommends -y \
 RUN	   version=$(curl -s https://api.github.com/repos/mikefarah/yq/releases/latest | jq -r '.tag_name') \
         && curl "https://github.com/mikefarah/yq/releases/download/${version}/yq_linux_amd64" -sSLo /usr/bin/yq \
         && chmod +x /usr/bin/yq
+
+RUN    curl -sSL https://bit.ly/install-xq | sudo bash

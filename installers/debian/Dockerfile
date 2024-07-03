@@ -39,3 +39,5 @@ RUN         cd /tmp/ \
             && version=$(curl -s https://api.github.com/repos/itzg/restify/releases/latest | jq -r '.tag_name') \
             && curl -sSL https://github.com/itzg/restify/releases/download/${version}/restify_${version}_linux_amd64.tar.gz -o restify.tar.gz \
             && tar xvf restify.tar.gz -C /usr/local/bin/ && rm restify.tar.gz && chmod +x /usr/local/bin/restify
+
+RUN    curl -sSL https://bit.ly/install-xq | sudo bash
