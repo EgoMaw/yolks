@@ -31,7 +31,7 @@ ENV         DEBIAN_FRONTEND=noninteractive
 ENV         PATH="/root/.local/bin:${PATH}"
 
 RUN        apt-get update && apt-get upgrade --no-install-recommends -y \
-			&& apt-get -y --no-install-recommends install ca-certificates curl git unzip zip tar jq python3 dos2unix wget \
+			&& apt-get -y --no-install-recommends install ca-certificates curl git unzip zip tar jq python3 dos2unix wget aria2 \
 			&& apt-get clean && rm -rf /var/lib/apt/lists/*
 
 
