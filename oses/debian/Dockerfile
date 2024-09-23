@@ -5,7 +5,7 @@ LABEL        author="EgoMaw" maintainer="egomaw@dedicatedmc.io"
 LABEL        org.opencontainers.image.source="https://github.com/egomaw/yolks"
 LABEL        org.opencontainers.image.licenses=MIT
 
-ENV          DEBIAN_FRONTEND noninteractive
+ENV          DEBIAN_FRONTEND=noninteractive
 
 RUN          useradd -m -d /home/container -s /bin/bash container
 

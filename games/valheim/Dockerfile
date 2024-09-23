@@ -2,7 +2,7 @@ FROM  --platform=$TARGETOS/$TARGETARCH debian:stable-slim
 
 LABEL author="EgoMaw" maintainer="egomaw@dedicatedmc.io"
 
-ENV   DEBIAN_FRONTEND noninteractive
+ENV   DEBIAN_FRONTEND=noninteractive
 
 ## add container user
 RUN   useradd -m -d /home/container -s /bin/bash container

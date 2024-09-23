@@ -2,7 +2,7 @@ FROM    --platform=$TARGETOS/$TARGETARCH debian:bookworm-slim
 
 LABEL   author="EgoMaw" maintainer="egomaw@dedicatedmc.io"
 
-ENV     DEBIAN_FRONTEND noninteractive
+ENV     DEBIAN_FRONTEND=noninteractive
 
 RUN     dpkg --add-architecture i386 \
           && apt update \

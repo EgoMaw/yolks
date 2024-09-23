@@ -5,7 +5,7 @@ FROM        --platform=$TARGETOS/$TARGETARCH mongo:6-focal
 
 LABEL       author="EgoMaw" maintainer="egomaw@dedicatedmc.io"
 
-ENV         DEBIAN_FRONTEND noninteractive
+ENV         DEBIAN_FRONTEND=noninteractive
 
 RUN         apt-get update -y \
             && apt-get install -y gettext-base netcat iproute2 \

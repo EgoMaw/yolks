@@ -2,7 +2,7 @@ FROM        --platform=$TARGETOS/$TARGETARCH ghcr.io/egomaw/yolks:debian
 
 LABEL       author="EgoMaw" maintainer="egomaw@dedicatedmc.io"
 
-ENV         DEBIAN_FRONTEND noninteractive
+ENV         DEBIAN_FRONTEND=noninteractive
 
 RUN        apt-get update -y \
             && apt-get upgrade -y \
