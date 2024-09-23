@@ -4,7 +4,7 @@
 FROM         --platform=$TARGETOS/$TARGETARCH registry.gitlab.steamos.cloud/steamrt/sniper/platform:latest-container-runtime-depot
 
 LABEL       author="Kimon EgoMaw" maintainer="egomaw@dedicatedmc.io"
-LABEL       org.opencontainers.image.description=SteamRT3 Platform image for Pterodactyl Source engine servers.
+LABEL       org.opencontainers.image.description="SteamRT3 Platform image for Pterodactyl Source engine servers."
 
 ## install required packages
 RUN         dpkg --add-architecture i386 \

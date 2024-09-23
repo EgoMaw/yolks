@@ -122,12 +122,12 @@ Replace {{distribution}} with the one you want from above.
 
 ### [MongoDB](/mongodb)
 
-* [`MongoDB 4`](/mongodb/4)
-  * `ghcr.io/egomaw/yolks:mongodb_4`
 * [`MongoDB 5`](/mongodb/5)
   * `ghcr.io/egomaw/yolks:mongodb_5`
 * [`MongoDB 6`](/mongodb/6)
   * `ghcr.io/egomaw/yolks:mongodb_6`
+* [`MongoDB 7`](/mongodb/7)
+  * `ghcr.io/egomaw/yolks:mongodb_7`
 
 ### [Nodejs](/nodejs)
 

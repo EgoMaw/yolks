@@ -1,7 +1,7 @@
 # ----------------------------------
 # Environment: MongoDB
 # ----------------------------------
-FROM        --platform=$TARGETOS/$TARGETARCH mongo:5-focal
+FROM        --platform=$TARGETOS/$TARGETARCH mongo:5
 
 LABEL       author="EgoMaw" maintainer="egomaw@dedicatedmc.io"
 
