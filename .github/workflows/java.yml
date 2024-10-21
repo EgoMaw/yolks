@@ -22,17 +22,15 @@ jobs:
         - amazoncorretto
         - graalvm
         tag:
-          - '8'
-          - '8-forge'
-          - '11'
-          - '11-forge'
-          - '16'
-          - '17'
-          - '18'
-          - '19'
-          - '20'
-          - '21'
+          - '8' # MC before 1.17
+          - '8-forge' # MC before 1.17
+          - '11' # MC before 1.17
+          - '11-forge' # MC before 1.17
+          - '16' # MC 1.17
+          - '17' # MC 1.18
+          - '21' # MC 1.21
           - '22'
+          - '23'
     steps:
 
       - name: Checkout Repository

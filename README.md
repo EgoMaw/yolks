@@ -3,7 +3,7 @@
 A curated collection of core images that can be used with Pterodactyl's Egg system. Each image is rebuilt
 periodically to ensure dependencies are always up-to-date.
 
-Images are hosted on `ghcr.io` and exist under the `games`, `installers`, and `yolks` spaces. The following logic
+Images are hosted on `ghcr.io` and exist under the `games`, `installers`, `java` and `yolks` spaces. The following logic
 is used when determining which space an image will live under:
 
 * `games` — anything within the `games` folder in the repository. These are images built for running a specific game
@@ -11,16 +11,18 @@ or type of game.
 * `installers` — anything living within the `installers` directory. These images are used by install scripts for different
 Eggs within Pterodactyl, not for actually running a game server. These images are only designed to reduce installation time
 and network usage by pre-installing common installation dependencies such as `curl` and `wget`.
+* `java` — anything living within the `java` directory. These images are used specifically for java programs and hold various
+java distributions such as `temurin`, `corretto` and more.
 * `yolks` — these are more generic images that allow different types of games or scripts to run. They're generally just
 a specific version of software and allow different Eggs within Pterodactyl to switch out the underlying implementation. An
-example of this would be something like Java or Python which are used for running bots, Minecraft servers, etc.
+example of this would be something like Python which are used for running bots, etc.
 
 All of these images are available for `linux/amd64` and `linux/arm64` versions, unless otherwise specified, to use
 these images on an arm system, no modification to them or the tag is needed, they should just work.
 
 ## Available Images
 
-### [Oses](/oses)
+### [OSes](/oses)
 
 * [`Alpine`](/oses/alpine)
   * `ghcr.io/egomaw/yolks:alpine`
@@ -80,34 +82,24 @@ There are 3 different Java distributions used,`temurin`, `zulu`, `openjdk` and `
 Replace {{distribution}} with the one you want from above.  
 **Be Wary though** Not all distributions support all versions, check the folders inside the java folder to be sure.
 
-* [`Java 7`](/java/7)
-  * `ghcr.io/egomaw/java:{{distribution}}_7`
 * [`Java 8`](/java/8)
   * `ghcr.io/egomaw/java:{{distribution}}_8`
 * [`Java 8 Forge`](/java/8-forge)
   * `ghcr.io/egomaw/java:{{distribution}}_8-forge`
-* [`Java 9`](/java/9)
-  * `ghcr.io/egomaw/java:{{distribution}}_9`
 * [`Java 11`](/java/11)
   * `ghcr.io/egomaw/java:{{distribution}}_11`
 * [`Java 11 Forge`](/java/11-forge)
   * `ghcr.io/egomaw/java:{{distribution}}_11-forge`
-* [`Java 14`](/java/14)
-  * `ghcr.io/egomaw/java:{{distribution}}_14`
 * [`Java 16`](/java/16)
   * `ghcr.io/egomaw/java:{{distribution}}_16`
 * [`Java 17`](/java/17)
   * `ghcr.io/egomaw/java:{{distribution}}_17`
-* [`Java 18`](/java/18)
-  * `ghcr.io/egomaw/java:{{distribution}}_18`
-* [`Java 19`](/java/19)
-  * `ghcr.io/egomaw/java:{{distribution}}_19`
-* [`Java 20`](/java/20)
-  * `ghcr.io/egomaw/java:{{distribution}}_20`
 * [`Java 21`](/java/21)
   * `ghcr.io/egomaw/java:{{distribution}}_21`
 * [`Java 22`](/java/22)
   * `ghcr.io/egomaw/java:{{distribution}}_22`
+* [`Java 23`](/java/23)
+  * `ghcr.io/egomaw/java:{{distribution}}_23`
 
 ### [MariaDB](/mariadb)
 
