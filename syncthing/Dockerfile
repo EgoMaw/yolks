@@ -2,7 +2,7 @@ FROM        --platform=$TARGETOS/$TARGETARCH debian:stable-slim
 LABEL       author="EgoMaw" maintainer="egomaw@dedicatedmc.io"
 
 RUN         apt-get update \
-            && apt-get -y --no-install-recommends install gettext-base ffmpeg iproute2 git sqlite3 libsqlite3-dev python3 python3-dev ca-certificates dnsutils tzdata zip tar curl build-essential libtool tini \
+            && apt-get -y --no-install-recommends install gettext-base ffmpeg iproute2 git sqlite3 libsqlite3-dev python3 python3-dev ca-certificates dnsutils tzdata zip tar curl build-essential libtool jq tini \
 			&& apt-get clean && rm -rf /var/lib/apt/lists/* \
             && useradd -m -d /home/container container
 
