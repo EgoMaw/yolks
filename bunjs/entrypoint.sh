@@ -9,9 +9,9 @@ if [ -d /home/container/.git ]; then
     export GIT_TERMINAL_PROMPT=0
 fi
 
-# Print Node.js Version
-printf "\033[1m\033[33mcontainer@pterodactyl~ \033[0mnode -v\n"
-node -v
+# Print bun Version
+printf "\033[1m\033[33mcontainer@pterodactyl~ \033[0mbun -v\n"
+bun -v
 
 # Run Preflight Script
 if [ -n "$PRE_STARTUP_SCRIPT" ]; then
